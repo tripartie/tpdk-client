@@ -3,7 +3,6 @@ name: Continuous Delivery (Publish)
 permissions:
   contents: write
   deployments: write
-  id-token: write
 
 on:
   workflow_dispatch:
@@ -18,7 +17,7 @@ jobs:
 
     environment:
       name: packagist
-      url: https://www.packagist.org/tripartie/tpdk-client
+      url: https://packagist.org/packages/tripartie/tpdk
 
     steps:
       - name: Checkout
