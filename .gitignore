@@ -1,0 +1,3 @@
+.openapi-generator/
+.travis.yml
+git_push.sh
