@@ -28,16 +28,13 @@ jobs:
         with:
           node-version: '18'
 
-      - run: wget -qO /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
-        name: Install YQ
-
       - run: sudo apt install -y jq
         name: Install JQ
 
-      - run: curl ${{ vars.OPENAPI_SCHEMA_HTTP }} -o oas-upstream.yml
+      - run: curl ${{ vars.OPENAPI_SCHEMA_HTTP }} -o oas-upstream.json
         name: Download latest OpenAPI
 
-      - run: echo tag=`cat oas-upstream.yml | yq -o=json | jq .info.version | tr -d '"\n'` >> "$GITHUB_OUTPUT"
+      - run: echo tag=`cat oas-upstream.json | jq .info.version | tr -d '"\n'` >> "$GITHUB_OUTPUT"
         name: Determine schema version
         id: version
 
@@ -54,10 +51,10 @@ jobs:
         run: rm -fR ./test || true
 
       - name: TPDK for PHP
-        run: openapi-generator-cli generate -g php --git-repo-id tpdk --git-user-id tripartie -o ./ -i oas-upstream.yml --additional-properties=invokerPackage=Tripartie\\\\Tpdk,variableNamingConvention=camelCase
+        run: openapi-generator-cli generate -g php --git-repo-id tpdk --git-user-id tripartie -o ./ -i oas-upstream.json --additional-properties=invokerPackage=Tripartie\\\\Tpdk,variableNamingConvention=camelCase
 
       - name: Cleanup
-        run: rm -f oas-upstream.yml openapitools.json
+        run: rm -f oas-upstream.json openapitools.json
 
       - name: Patch license (PHP)
         run: sed -i 's/unlicense/Apache-2\.0/g' ./composer.json
