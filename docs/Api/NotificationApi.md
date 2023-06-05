@@ -4,10 +4,10 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**apiPersonasIdnotificationsGetCollection()**](NotificationApi.md#apiPersonasIdnotificationsGetCollection) | **GET** /personas/{id}/notifications | Retrieves the collection of Notification resources. |
-| [**apiPersonasPersonaIdnotificationsIdPatch()**](NotificationApi.md#apiPersonasPersonaIdnotificationsIdPatch) | **PATCH** /personas/{personaId}/notifications/{id} | Updates the Notification resource. |
+| [**apiPersonasIdnotificationsGetCollection()**](NotificationApi.md#apiPersonasIdnotificationsGetCollection) | **GET** /personas/{id}/notifications | Retrieve pending notifications for Persona |
+| [**apiPersonasPersonaIdnotificationsIdPatch()**](NotificationApi.md#apiPersonasPersonaIdnotificationsIdPatch) | **PATCH** /personas/{personaId}/notifications/{id} | Mark as read/unread a notification for Persona |
 | [**apiUsersIdnotificationsGetCollection()**](NotificationApi.md#apiUsersIdnotificationsGetCollection) | **GET** /users/{id}/notifications | Retrieves the collection of Notification resources. |
-| [**apiUsersUserIdnotificationsIdPatch()**](NotificationApi.md#apiUsersUserIdnotificationsIdPatch) | **PATCH** /users/{userId}/notifications/{id} | Updates the Notification resource. |
+| [**apiUsersUserIdnotificationsIdPatch()**](NotificationApi.md#apiUsersUserIdnotificationsIdPatch) | **PATCH** /users/{userId}/notifications/{id} | Mark as read/unread a notification for User |
 
 
 ## `apiPersonasIdnotificationsGetCollection()`
@@ -16,7 +16,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 apiPersonasIdnotificationsGetCollection($id, $page): \Tripartie\Tpdk\Model\Notification[]
 ```
 
-Retrieves the collection of Notification resources.
+Retrieve pending notifications for Persona
 
 Retrieves the collection of Notification resources.
 
@@ -27,18 +27,10 @@ Retrieves the collection of Notification resources.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: jwtPersonalKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 
 $apiInstance = new Tripartie\Tpdk\Api\NotificationApi(
@@ -71,7 +63,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[personaAuthKey](../../README.md#personaAuthKey)
 
 ### HTTP request headers
 
@@ -88,7 +80,7 @@ try {
 apiPersonasPersonaIdnotificationsIdPatch($personaId, $id, $notification): \Tripartie\Tpdk\Model\Notification
 ```
 
-Updates the Notification resource.
+Mark as read/unread a notification for Persona
 
 Updates the Notification resource.
 
@@ -99,18 +91,10 @@ Updates the Notification resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: jwtPersonalKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 
 $apiInstance = new Tripartie\Tpdk\Api\NotificationApi(
@@ -145,7 +129,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[personaAuthKey](../../README.md#personaAuthKey)
 
 ### HTTP request headers
 
@@ -179,9 +163,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -234,7 +218,7 @@ try {
 apiUsersUserIdnotificationsIdPatch($userId, $id, $notificationUpdate): \Tripartie\Tpdk\Model\NotificationRead
 ```
 
-Updates the Notification resource.
+Mark as read/unread a notification for User
 
 Updates the Notification resource.
 
@@ -249,14 +233,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Tripartie\Tpdk\Api\NotificationApi(
@@ -291,7 +267,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey)
 
 ### HTTP request headers
 

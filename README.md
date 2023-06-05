@@ -51,24 +51,33 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
+
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
-$apiInstance = new Tripartie\Tpdk\Api\BrandingApi(
+$apiInstance = new Tripartie\Tpdk\Api\AIApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Organization identifier
-$organizationUpdate = new \Tripartie\Tpdk\Model\OrganizationUpdate(); // \Tripartie\Tpdk\Model\OrganizationUpdate | The updated Organization resource
+$aiHint = new \Tripartie\Tpdk\Model\AiHint(); // \Tripartie\Tpdk\Model\AiHint | The new AiHint resource
 
 try {
-    $result = $apiInstance->apiOrganizationsIdPatch($id, $organizationUpdate);
+    $result = $apiInstance->apiAiHintsPost($aiHint);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling BrandingApi->apiOrganizationsIdPatch: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling AIApi->apiAiHintsPost: ', $e->getMessage(), PHP_EOL;
 }
 
 ```
@@ -79,15 +88,16 @@ All URIs are relative to *https://staging-api.tripartie.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AIApi* | [**apiAiHintsPost**](docs/Api/AIApi.md#apiaihintspost) | **POST** /ai-hints | Dedicated endpoint for our artificial intelligence bot
 *BrandingApi* | [**apiOrganizationsIdPatch**](docs/Api/BrandingApi.md#apiorganizationsidpatch) | **PATCH** /organizations/{id} | Update your Organization details, branding or parameters
 *BrandingApi* | [**apiOrganizationsIdiconDelete**](docs/Api/BrandingApi.md#apiorganizationsidicondelete) | **DELETE** /organizations/{id}/icon | Unset your Organization Icon
 *BrandingApi* | [**apiOrganizationsIdiconPost**](docs/Api/BrandingApi.md#apiorganizationsidiconpost) | **POST** /organizations/{id}/icon | Upload your Organization Icon
 *BrandingApi* | [**apiOrganizationsIdlogoDelete**](docs/Api/BrandingApi.md#apiorganizationsidlogodelete) | **DELETE** /organizations/{id}/logo | Unset your Organization Logo
 *BrandingApi* | [**apiOrganizationsIdlogoPost**](docs/Api/BrandingApi.md#apiorganizationsidlogopost) | **POST** /organizations/{id}/logo | Upload your Organization logo
-*NotificationApi* | [**apiPersonasIdnotificationsGetCollection**](docs/Api/NotificationApi.md#apipersonasidnotificationsgetcollection) | **GET** /personas/{id}/notifications | Retrieves the collection of Notification resources.
-*NotificationApi* | [**apiPersonasPersonaIdnotificationsIdPatch**](docs/Api/NotificationApi.md#apipersonaspersonaidnotificationsidpatch) | **PATCH** /personas/{personaId}/notifications/{id} | Updates the Notification resource.
+*NotificationApi* | [**apiPersonasIdnotificationsGetCollection**](docs/Api/NotificationApi.md#apipersonasidnotificationsgetcollection) | **GET** /personas/{id}/notifications | Retrieve pending notifications for Persona
+*NotificationApi* | [**apiPersonasPersonaIdnotificationsIdPatch**](docs/Api/NotificationApi.md#apipersonaspersonaidnotificationsidpatch) | **PATCH** /personas/{personaId}/notifications/{id} | Mark as read/unread a notification for Persona
 *NotificationApi* | [**apiUsersIdnotificationsGetCollection**](docs/Api/NotificationApi.md#apiusersidnotificationsgetcollection) | **GET** /users/{id}/notifications | Retrieves the collection of Notification resources.
-*NotificationApi* | [**apiUsersUserIdnotificationsIdPatch**](docs/Api/NotificationApi.md#apiusersuseridnotificationsidpatch) | **PATCH** /users/{userId}/notifications/{id} | Updates the Notification resource.
+*NotificationApi* | [**apiUsersUserIdnotificationsIdPatch**](docs/Api/NotificationApi.md#apiusersuseridnotificationsidpatch) | **PATCH** /users/{userId}/notifications/{id} | Mark as read/unread a notification for User
 *PersonaApi* | [**apiPersonasGetCollection**](docs/Api/PersonaApi.md#apipersonasgetcollection) | **GET** /personas | Retrieves the collection of Persona resources.
 *PersonaApi* | [**apiPersonasIdDelete**](docs/Api/PersonaApi.md#apipersonasiddelete) | **DELETE** /personas/{id} | Unregister a Persona (Your customer)
 *PersonaApi* | [**apiPersonasIdGet**](docs/Api/PersonaApi.md#apipersonasidget) | **GET** /personas/{id} | Retrieves a Persona resource.
@@ -98,7 +108,7 @@ Class | Method | HTTP request | Description
 *ResolutionCenterApi* | [**apiDisputesPost**](docs/Api/ResolutionCenterApi.md#apidisputespost) | **POST** /disputes | Draft a standalone Dispute
 *ResolutionCenterApi* | [**apiDisputesUlidDelete**](docs/Api/ResolutionCenterApi.md#apidisputesuliddelete) | **DELETE** /disputes/{ulid} | Abandon claims on Dispute
 *ResolutionCenterApi* | [**apiDisputesUlidGet**](docs/Api/ResolutionCenterApi.md#apidisputesulidget) | **GET** /disputes/{ulid} | Retrieves a Dispute resource.
-*ResolutionCenterApi* | [**apiDisputesUlidPatch**](docs/Api/ResolutionCenterApi.md#apidisputesulidpatch) | **PATCH** /disputes/{ulid} | Updates the Dispute resource.
+*ResolutionCenterApi* | [**apiDisputesUlidPatch**](docs/Api/ResolutionCenterApi.md#apidisputesulidpatch) | **PATCH** /disputes/{ulid} | Update the Dispute
 *ResolutionCenterApi* | [**apiDisputesUlidevaluationsPost**](docs/Api/ResolutionCenterApi.md#apidisputesulidevaluationspost) | **POST** /disputes/{ulid}/evaluations | Submit an Evaluation for the Dispute
 *ResolutionCenterApi* | [**apiDisputesUlidevidencesGetCollection**](docs/Api/ResolutionCenterApi.md#apidisputesulidevidencesgetcollection) | **GET** /disputes/{ulid}/evidences | Retrieve all Evidences in Dispute
 *ResolutionCenterApi* | [**apiDisputesUlidevidencesIdDelete**](docs/Api/ResolutionCenterApi.md#apidisputesulidevidencesiddelete) | **DELETE** /disputes/{ulid}/evidences/{id} | Withdraw an Evidence from a Dispute
@@ -120,6 +130,7 @@ Class | Method | HTTP request | Description
 *SafeCheckoutApi* | [**apiPersonasIdoffersGetCollection**](docs/Api/SafeCheckoutApi.md#apipersonasidoffersgetcollection) | **GET** /personas/{id}/offers | List or Search Offers for given Persona
 *SafeCheckoutApi* | [**apiPersonasIdoffersPatch**](docs/Api/SafeCheckoutApi.md#apipersonasidofferspatch) | **PATCH** /personas/{id}/offers | Update an Offer for given Persona
 *SafeCheckoutApi* | [**apiPersonasIdoffersPost**](docs/Api/SafeCheckoutApi.md#apipersonasidofferspost) | **POST** /personas/{id}/offers | Create an Offer for given Persona
+*SafeCheckoutApi* | [**apiTransactionsGetCollection**](docs/Api/SafeCheckoutApi.md#apitransactionsgetcollection) | **GET** /transactions | Retrieves the collection of Transaction resources.
 *SafeCheckoutApi* | [**apiTransactionsUliddisputeDelete**](docs/Api/SafeCheckoutApi.md#apitransactionsuliddisputedelete) | **DELETE** /transactions/{ulid}/dispute | Abandon claims on Dispute
 *SafeCheckoutApi* | [**apiTransactionsUliddisputeGet**](docs/Api/SafeCheckoutApi.md#apitransactionsuliddisputeget) | **GET** /transactions/{ulid}/dispute | Read Dispute from existing Transaction
 *SafeCheckoutApi* | [**apiTransactionsUliddisputePatch**](docs/Api/SafeCheckoutApi.md#apitransactionsuliddisputepatch) | **PATCH** /transactions/{ulid}/dispute | Interact with a Dispute
@@ -127,8 +138,6 @@ Class | Method | HTTP request | Description
 *SafeCheckoutApi* | [**apiTransactionsUlidparcelsGetCollection**](docs/Api/SafeCheckoutApi.md#apitransactionsulidparcelsgetcollection) | **GET** /transactions/{ulid}/parcels | Read shipments from Transaction
 *SafeCheckoutApi* | [**apiTransactionsUlidparcelsIdDelete**](docs/Api/SafeCheckoutApi.md#apitransactionsulidparcelsiddelete) | **DELETE** /transactions/{ulid}/parcels/{id} | Withdraw shipment from Transaction
 *SafeCheckoutApi* | [**apiTransactionsUlidparcelsPost**](docs/Api/SafeCheckoutApi.md#apitransactionsulidparcelspost) | **POST** /transactions/{ulid}/parcels | Manually declare package shipped for Transaction
-*TransactionApi* | [**apiTransactionsGetCollection**](docs/Api/TransactionApi.md#apitransactionsgetcollection) | **GET** /transactions | Retrieves the collection of Transaction resources.
-*UserApi* | [**apiOrganizationsIdPatch**](docs/Api/UserApi.md#apiorganizationsidpatch) | **PATCH** /organizations/{id} | Update your Organization details, branding or parameters
 *UserApi* | [**apiPersonasauthenticationPost**](docs/Api/UserApi.md#apipersonasauthenticationpost) | **POST** /personas/authentication | Persona Authentication
 *UserApi* | [**apiPersonasregisterPost**](docs/Api/UserApi.md#apipersonasregisterpost) | **POST** /personas/register | Persona external registration
 *UserApi* | [**apiRegisterPost**](docs/Api/UserApi.md#apiregisterpost) | **POST** /register | Organization onboarding
@@ -137,7 +146,7 @@ Class | Method | HTTP request | Description
 *UserApi* | [**apiUsersIdemailValidationPatch**](docs/Api/UserApi.md#apiusersidemailvalidationpatch) | **PATCH** /users/{id}/email-validation | Validate email ownership
 *WebhookApi* | [**apiWebhookHistoriesGetCollection**](docs/Api/WebhookApi.md#apiwebhookhistoriesgetcollection) | **GET** /webhook-histories | Retrieves the collection of WebhookHistory resources.
 *WebhookApi* | [**apiWebhookHistoriesIdGet**](docs/Api/WebhookApi.md#apiwebhookhistoriesidget) | **GET** /webhook-histories/{id} | Retrieves a WebhookHistory resource.
-*WebhookApi* | [**apiWebhookHistoriesIdPut**](docs/Api/WebhookApi.md#apiwebhookhistoriesidput) | **PUT** /webhook-histories/{id} | Replay a Webhook that ended in failure
+*WebhookApi* | [**apiWebhookHistoriesIdPut**](docs/Api/WebhookApi.md#apiwebhookhistoriesidput) | **PUT** /webhook-histories/{id} | Replay a Webhook that ended up in failure
 *WebhookApi* | [**apiWebhookSubscriptionsGetCollection**](docs/Api/WebhookApi.md#apiwebhooksubscriptionsgetcollection) | **GET** /webhook-subscriptions | Retrieves the collection of WebhookSubscription resources.
 *WebhookApi* | [**apiWebhookSubscriptionsIdDelete**](docs/Api/WebhookApi.md#apiwebhooksubscriptionsiddelete) | **DELETE** /webhook-subscriptions/{id} | Removes the WebhookSubscription resource.
 *WebhookApi* | [**apiWebhookSubscriptionsPost**](docs/Api/WebhookApi.md#apiwebhooksubscriptionspost) | **POST** /webhook-subscriptions | Subscribe to Event(s)
@@ -149,6 +158,7 @@ Class | Method | HTTP request | Description
 - [AddressRead](docs/Model/AddressRead.md)
 - [AddressUpdate](docs/Model/AddressUpdate.md)
 - [AddressWrite](docs/Model/AddressWrite.md)
+- [AiHint](docs/Model/AiHint.md)
 - [ApiClient](docs/Model/ApiClient.md)
 - [Dispute](docs/Model/Dispute.md)
 - [DisputeCollectionRead](docs/Model/DisputeCollectionRead.md)
@@ -197,6 +207,8 @@ Class | Method | HTTP request | Description
 - [PersonaCollectionRead](docs/Model/PersonaCollectionRead.md)
 - [PersonaIndependentWrite](docs/Model/PersonaIndependentWrite.md)
 - [PersonaIndependentWriteAddress](docs/Model/PersonaIndependentWriteAddress.md)
+- [PersonaPersonaAuthReturn](docs/Model/PersonaPersonaAuthReturn.md)
+- [PersonaPersonaExternalAuth](docs/Model/PersonaPersonaExternalAuth.md)
 - [PersonaPostAuthRead](docs/Model/PersonaPostAuthRead.md)
 - [PersonaRead](docs/Model/PersonaRead.md)
 - [PersonaReadAddress](docs/Model/PersonaReadAddress.md)
@@ -229,6 +241,7 @@ Class | Method | HTTP request | Description
 
 ## Authorization
 
+Authentication schemes defined for the API:
 ### oauth
 
 - **Type**: `OAuth`
@@ -246,7 +259,7 @@ Class | Method | HTTP request | Description
     - **PERSONA_READ**: Read operations on the shared user-base knowledge
     - **PERSONA_WRITE**: Write permissions on the shared user-base knowledge
     - **PERSONA_AUTH**: Capability to issue short-term lived authenticated URL
-
+    - **INTERNAL_WRITE**: Special internal scope
 
 ### jwtPersonalKey
 
@@ -255,11 +268,10 @@ Class | Method | HTTP request | Description
 - **Location**: HTTP header
 
 
-
 ### personaAuthKey
 
 - **Type**: API key
-- **API key parameter name**: X-Persona-Auth
+- **API key parameter name**: X-Persona-Authorization
 - **Location**: HTTP header
 
 
@@ -280,5 +292,5 @@ noc@tripartie.com
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2.0.0-b2`
+- API version: `2.0.7`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

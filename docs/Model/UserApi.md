@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **owner** | **string** |  | [optional]
 **createdAt** | **\DateTime** |  |
 **secret** | **string** |  | [optional]
-**monthlyQuota** | **int** |  | [optional]
 **name** | **string** |  | [optional]
 **redirectUris** | **object[]** |  | [optional]
 **grants** | **object[]** |  | [optional]

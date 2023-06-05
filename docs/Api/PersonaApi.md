@@ -15,7 +15,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 ## `apiPersonasGetCollection()`
 
 ```php
-apiPersonasGetCollection($page, $firstName, $lastName, $dateOfBirth, $dateOfBirth2, $email, $mobilePhoneNumber, $mobilePhoneNumber2, $gender, $orderCreatedAt, $createdAtBefore, $createdAtStrictlyBefore, $createdAtAfter, $createdAtStrictlyAfter, $metadata): \Tripartie\Tpdk\Model\PersonaCollectionRead[]
+apiPersonasGetCollection($page, $firstName, $lastName, $email, $mobilePhoneNumber, $mobilePhoneNumber2, $gender, $orderCreatedAt, $createdAtBefore, $createdAtStrictlyBefore, $createdAtAfter, $createdAtStrictlyAfter, $dateOfBirthBefore, $dateOfBirthStrictlyBefore, $dateOfBirthAfter, $dateOfBirthStrictlyAfter, $metadata): \Tripartie\Tpdk\Model\PersonaCollectionRead[]
 ```
 
 Retrieves the collection of Persona resources.
@@ -28,6 +28,11 @@ Retrieves the collection of Persona resources.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -42,8 +47,6 @@ $apiInstance = new Tripartie\Tpdk\Api\PersonaApi(
 $page = 1; // int | The collection page number
 $firstName = 'firstName_example'; // string | 
 $lastName = 'lastName_example'; // string | 
-$dateOfBirth = 'dateOfBirth_example'; // string | 
-$dateOfBirth2 = 'dateOfBirth_example'; // string | 
 $email = 'email_example'; // string | 
 $mobilePhoneNumber = 'mobilePhoneNumber_example'; // string | 
 $mobilePhoneNumber2 = array('mobilePhoneNumber_example'); // string[] | 
@@ -53,10 +56,14 @@ $createdAtBefore = 'createdAtBefore_example'; // string |
 $createdAtStrictlyBefore = 'createdAtStrictlyBefore_example'; // string | 
 $createdAtAfter = 'createdAtAfter_example'; // string | 
 $createdAtStrictlyAfter = 'createdAtStrictlyAfter_example'; // string | 
+$dateOfBirthBefore = 'dateOfBirthBefore_example'; // string | 
+$dateOfBirthStrictlyBefore = 'dateOfBirthStrictlyBefore_example'; // string | 
+$dateOfBirthAfter = 'dateOfBirthAfter_example'; // string | 
+$dateOfBirthStrictlyAfter = 'dateOfBirthStrictlyAfter_example'; // string | 
 $metadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
 
 try {
-    $result = $apiInstance->apiPersonasGetCollection($page, $firstName, $lastName, $dateOfBirth, $dateOfBirth2, $email, $mobilePhoneNumber, $mobilePhoneNumber2, $gender, $orderCreatedAt, $createdAtBefore, $createdAtStrictlyBefore, $createdAtAfter, $createdAtStrictlyAfter, $metadata);
+    $result = $apiInstance->apiPersonasGetCollection($page, $firstName, $lastName, $email, $mobilePhoneNumber, $mobilePhoneNumber2, $gender, $orderCreatedAt, $createdAtBefore, $createdAtStrictlyBefore, $createdAtAfter, $createdAtStrictlyAfter, $dateOfBirthBefore, $dateOfBirthStrictlyBefore, $dateOfBirthAfter, $dateOfBirthStrictlyAfter, $metadata);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonaApi->apiPersonasGetCollection: ', $e->getMessage(), PHP_EOL;
@@ -70,8 +77,6 @@ try {
 | **page** | **int**| The collection page number | [optional] [default to 1] |
 | **firstName** | **string**|  | [optional] |
 | **lastName** | **string**|  | [optional] |
-| **dateOfBirth** | **string**|  | [optional] |
-| **dateOfBirth2** | **string**|  | [optional] |
 | **email** | **string**|  | [optional] |
 | **mobilePhoneNumber** | **string**|  | [optional] |
 | **mobilePhoneNumber2** | [**string[]**](../Model/string.md)|  | [optional] |
@@ -81,6 +86,10 @@ try {
 | **createdAtStrictlyBefore** | **string**|  | [optional] |
 | **createdAtAfter** | **string**|  | [optional] |
 | **createdAtStrictlyAfter** | **string**|  | [optional] |
+| **dateOfBirthBefore** | **string**|  | [optional] |
+| **dateOfBirthStrictlyBefore** | **string**|  | [optional] |
+| **dateOfBirthAfter** | **string**|  | [optional] |
+| **dateOfBirthStrictlyAfter** | **string**|  | [optional] |
 | **metadata** | [**string[]**](../Model/string.md)| Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \&quot;null\&quot; for desired value. | [optional] |
 
 ### Return type
@@ -89,7 +98,7 @@ try {
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 
@@ -116,6 +125,16 @@ You **MAY** unregister (or free the email/phone number) your Persona entry using
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -148,7 +167,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 
@@ -175,6 +194,16 @@ Retrieves a Persona resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -208,7 +237,7 @@ try {
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 
@@ -235,6 +264,16 @@ Update your Persona (eg. your customer/user entry) through that API call. _Bewar
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -270,7 +309,7 @@ try {
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 

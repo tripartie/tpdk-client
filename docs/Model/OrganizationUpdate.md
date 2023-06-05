@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | [optional]
 **vatNumber** | **string** |  | [optional]
 **commercialRegistryNumber** | **string** |  | [optional]
+**webhookUrl** | **string** |  | [optional]
 **websiteUrl** | **string** |  | [optional]
 **customBaseUrl** | **string** |  | [optional]
 **billingAddress** | [**\Tripartie\Tpdk\Model\OrganizationUpdateBillingAddress**](OrganizationUpdateBillingAddress.md) |  | [optional]
@@ -17,7 +18,7 @@ Name | Type | Description | Notes
 **infoColor** | **string** |  | [optional]
 **successColor** | **string** |  | [optional]
 **warningColor** | **string** |  | [optional]
-**endUserNotificationToggle** | **bool** |  |
+**directNotificationToggle** | **bool** |  | [default to true]
 **anonymityLevel** | **string** |  | [default to 'PARTIAL_FIRST_NAME']
 **flatRateEnabled** | **bool** |  | [optional] [readonly]
 **rateCommissionSafeCheckout** | **float** |  |

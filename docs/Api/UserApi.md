@@ -4,7 +4,6 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**apiOrganizationsIdPatch()**](UserApi.md#apiOrganizationsIdPatch) | **PATCH** /organizations/{id} | Update your Organization details, branding or parameters |
 | [**apiPersonasauthenticationPost()**](UserApi.md#apiPersonasauthenticationPost) | **POST** /personas/authentication | Persona Authentication |
 | [**apiPersonasregisterPost()**](UserApi.md#apiPersonasregisterPost) | **POST** /personas/register | Persona external registration |
 | [**apiRegisterPost()**](UserApi.md#apiRegisterPost) | **POST** /register | Organization onboarding |
@@ -13,72 +12,10 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | [**apiUsersIdemailValidationPatch()**](UserApi.md#apiUsersIdemailValidationPatch) | **PATCH** /users/{id}/email-validation | Validate email ownership |
 
 
-## `apiOrganizationsIdPatch()`
-
-```php
-apiOrganizationsIdPatch($id, $organizationUpdate): \Tripartie\Tpdk\Model\OrganizationRead
-```
-
-Update your Organization details, branding or parameters
-
-Updates the Organization resource.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Tripartie\Tpdk\Api\UserApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = 'id_example'; // string | Organization identifier
-$organizationUpdate = new \Tripartie\Tpdk\Model\OrganizationUpdate(); // \Tripartie\Tpdk\Model\OrganizationUpdate | The updated Organization resource
-
-try {
-    $result = $apiInstance->apiOrganizationsIdPatch($id, $organizationUpdate);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling UserApi->apiOrganizationsIdPatch: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Organization identifier | |
-| **organizationUpdate** | [**\Tripartie\Tpdk\Model\OrganizationUpdate**](../Model/OrganizationUpdate.md)| The updated Organization resource | |
-
-### Return type
-
-[**\Tripartie\Tpdk\Model\OrganizationRead**](../Model/OrganizationRead.md)
-
-### Authorization
-
-[oauth](../../README.md#oauth)
-
-### HTTP request headers
-
-- **Content-Type**: `application/json`
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
 ## `apiPersonasauthenticationPost()`
 
 ```php
-apiPersonasauthenticationPost($persona): \Tripartie\Tpdk\Model\Persona
+apiPersonasauthenticationPost($personaPersonaExternalAuth): \Tripartie\Tpdk\Model\PersonaPersonaAuthReturn
 ```
 
 Persona Authentication
@@ -98,9 +35,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -112,10 +49,10 @@ $apiInstance = new Tripartie\Tpdk\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
-$persona = new \Tripartie\Tpdk\Model\Persona(); // \Tripartie\Tpdk\Model\Persona | The new Persona resource
+$personaPersonaExternalAuth = new \Tripartie\Tpdk\Model\PersonaPersonaExternalAuth(); // \Tripartie\Tpdk\Model\PersonaPersonaExternalAuth | The new Persona resource
 
 try {
-    $result = $apiInstance->apiPersonasauthenticationPost($persona);
+    $result = $apiInstance->apiPersonasauthenticationPost($personaPersonaExternalAuth);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->apiPersonasauthenticationPost: ', $e->getMessage(), PHP_EOL;
@@ -126,11 +63,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **persona** | [**\Tripartie\Tpdk\Model\Persona**](../Model/Persona.md)| The new Persona resource | |
+| **personaPersonaExternalAuth** | [**\Tripartie\Tpdk\Model\PersonaPersonaExternalAuth**](../Model/PersonaPersonaExternalAuth.md)| The new Persona resource | |
 
 ### Return type
 
-[**\Tripartie\Tpdk\Model\Persona**](../Model/Persona.md)
+[**\Tripartie\Tpdk\Model\PersonaPersonaAuthReturn**](../Model/PersonaPersonaAuthReturn.md)
 
 ### Authorization
 
@@ -168,9 +105,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -238,9 +175,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -307,14 +244,6 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new Tripartie\Tpdk\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -344,7 +273,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey)
 
 ### HTTP request headers
 
@@ -377,14 +306,6 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new Tripartie\Tpdk\Api\UserApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -414,7 +335,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey)
 
 ### HTTP request headers
 
@@ -448,9 +369,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
