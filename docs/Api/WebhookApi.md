@@ -6,7 +6,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | ------------- | ------------- | ------------- |
 | [**apiWebhookHistoriesGetCollection()**](WebhookApi.md#apiWebhookHistoriesGetCollection) | **GET** /webhook-histories | Retrieves the collection of WebhookHistory resources. |
 | [**apiWebhookHistoriesIdGet()**](WebhookApi.md#apiWebhookHistoriesIdGet) | **GET** /webhook-histories/{id} | Retrieves a WebhookHistory resource. |
-| [**apiWebhookHistoriesIdPut()**](WebhookApi.md#apiWebhookHistoriesIdPut) | **PUT** /webhook-histories/{id} | Replay a Webhook that ended in failure |
+| [**apiWebhookHistoriesIdPut()**](WebhookApi.md#apiWebhookHistoriesIdPut) | **PUT** /webhook-histories/{id} | Replay a Webhook that ended up in failure |
 | [**apiWebhookSubscriptionsGetCollection()**](WebhookApi.md#apiWebhookSubscriptionsGetCollection) | **GET** /webhook-subscriptions | Retrieves the collection of WebhookSubscription resources. |
 | [**apiWebhookSubscriptionsIdDelete()**](WebhookApi.md#apiWebhookSubscriptionsIdDelete) | **DELETE** /webhook-subscriptions/{id} | Removes the WebhookSubscription resource. |
 | [**apiWebhookSubscriptionsPost()**](WebhookApi.md#apiWebhookSubscriptionsPost) | **POST** /webhook-subscriptions | Subscribe to Event(s) |
@@ -33,11 +33,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -75,7 +70,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 
@@ -107,11 +102,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -145,7 +135,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 
@@ -162,7 +152,7 @@ try {
 apiWebhookHistoriesIdPut($id, $body): \Tripartie\Tpdk\Model\WebhookHistoryRead
 ```
 
-Replay a Webhook that ended in failure
+Replay a Webhook that ended up in failure
 
 Replaces the WebhookHistory resource.
 
@@ -177,14 +167,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
 
 $apiInstance = new Tripartie\Tpdk\Api\WebhookApi(
@@ -217,7 +199,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey)
 
 ### HTTP request headers
 
@@ -249,11 +231,6 @@ require_once(__DIR__ . '/vendor/autoload.php');
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -289,7 +266,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 
@@ -322,14 +299,6 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new Tripartie\Tpdk\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -358,7 +327,7 @@ void (empty response body)
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey)
 
 ### HTTP request headers
 
@@ -391,14 +360,6 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new Tripartie\Tpdk\Api\WebhookApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -428,7 +389,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey)
 
 ### HTTP request headers
 

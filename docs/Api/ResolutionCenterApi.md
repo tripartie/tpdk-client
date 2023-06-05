@@ -8,7 +8,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | [**apiDisputesPost()**](ResolutionCenterApi.md#apiDisputesPost) | **POST** /disputes | Draft a standalone Dispute |
 | [**apiDisputesUlidDelete()**](ResolutionCenterApi.md#apiDisputesUlidDelete) | **DELETE** /disputes/{ulid} | Abandon claims on Dispute |
 | [**apiDisputesUlidGet()**](ResolutionCenterApi.md#apiDisputesUlidGet) | **GET** /disputes/{ulid} | Retrieves a Dispute resource. |
-| [**apiDisputesUlidPatch()**](ResolutionCenterApi.md#apiDisputesUlidPatch) | **PATCH** /disputes/{ulid} | Updates the Dispute resource. |
+| [**apiDisputesUlidPatch()**](ResolutionCenterApi.md#apiDisputesUlidPatch) | **PATCH** /disputes/{ulid} | Update the Dispute |
 | [**apiDisputesUlidevaluationsPost()**](ResolutionCenterApi.md#apiDisputesUlidevaluationsPost) | **POST** /disputes/{ulid}/evaluations | Submit an Evaluation for the Dispute |
 | [**apiDisputesUlidevidencesGetCollection()**](ResolutionCenterApi.md#apiDisputesUlidevidencesGetCollection) | **GET** /disputes/{ulid}/evidences | Retrieve all Evidences in Dispute |
 | [**apiDisputesUlidevidencesIdDelete()**](ResolutionCenterApi.md#apiDisputesUlidevidencesIdDelete) | **DELETE** /disputes/{ulid}/evidences/{id} | Withdraw an Evidence from a Dispute |
@@ -36,6 +36,11 @@ Retrieves the collection of Dispute resources.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -103,7 +108,7 @@ try {
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 
@@ -191,6 +196,16 @@ Abandon claims on Dispute
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
+
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -222,7 +237,7 @@ void (empty response body)
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 
@@ -249,6 +264,16 @@ Retrieves a Dispute resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -282,7 +307,7 @@ try {
 
 ### Authorization
 
-[oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 
@@ -299,7 +324,7 @@ try {
 apiDisputesUlidPatch($ulid, $disputeUpdate): \Tripartie\Tpdk\Model\DisputeRead
 ```
 
-Updates the Dispute resource.
+Update the Dispute
 
 Updates the Dispute resource.
 
@@ -316,9 +341,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -382,18 +407,10 @@ Submit an Evaluation for the Dispute
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: jwtPersonalKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 
 $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
@@ -426,7 +443,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[personaAuthKey](../../README.md#personaAuthKey)
 
 ### HTTP request headers
 
@@ -460,12 +477,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 
 $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
@@ -498,7 +512,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey)
 
 ### HTTP request headers
 
@@ -532,12 +546,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 
 $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
@@ -569,7 +580,7 @@ void (empty response body)
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey)
 
 ### HTTP request headers
 
@@ -597,18 +608,10 @@ Creates a Media resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: jwtPersonalKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 
 $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
@@ -643,7 +646,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[personaAuthKey](../../README.md#personaAuthKey)
 
 ### HTTP request headers
 
@@ -671,18 +674,10 @@ This action does not held the actual upload, you will have to do the upload in a
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: jwtPersonalKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 
 $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
@@ -715,7 +710,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[personaAuthKey](../../README.md#personaAuthKey)
 
 ### HTTP request headers
 
@@ -749,9 +744,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -820,14 +815,6 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -858,7 +845,7 @@ void (empty response body)
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey)
 
 ### HTTP request headers
 
@@ -892,9 +879,9 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -958,15 +945,10 @@ Creates a Media resource.
 require_once(__DIR__ . '/vendor/autoload.php');
 
 
-// Configure API key authorization: jwtPersonalKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
 // Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Auth', 'YOUR_API_KEY');
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Auth', 'Bearer');
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
@@ -1002,7 +984,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 

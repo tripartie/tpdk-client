@@ -15,6 +15,7 @@ Name | Type | Description | Notes
 **condition** | **string** |  | [default to 'USED']
 **weightInGram** | **int** |  | [optional]
 **eanCode** | **string** |  | [optional]
+**canBeSoldSeparately** | **bool** | Set this flag to false to forbid a potential buyer to acquire this item separately.          This is only useful in a BulkOffer context. | [default to true]
 **metadata** | [**\Tripartie\Tpdk\Model\MetadataIndependentWrite[]**](MetadataIndependentWrite.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

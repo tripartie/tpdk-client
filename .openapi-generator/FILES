@@ -1,15 +1,14 @@
 .gitignore
-.openapi-generator-ignore
 .php-cs-fixer.dist.php
 .travis.yml
 README.md
 composer.json
+docs/Api/AIApi.md
 docs/Api/BrandingApi.md
 docs/Api/NotificationApi.md
 docs/Api/PersonaApi.md
 docs/Api/ResolutionCenterApi.md
 docs/Api/SafeCheckoutApi.md
-docs/Api/TransactionApi.md
 docs/Api/UserApi.md
 docs/Api/WebhookApi.md
 docs/Model/Address.md
@@ -17,6 +16,7 @@ docs/Model/AddressIndependentWrite.md
 docs/Model/AddressRead.md
 docs/Model/AddressUpdate.md
 docs/Model/AddressWrite.md
+docs/Model/AiHint.md
 docs/Model/ApiClient.md
 docs/Model/Dispute.md
 docs/Model/DisputeCollectionRead.md
@@ -65,6 +65,8 @@ docs/Model/PersonaAddress.md
 docs/Model/PersonaCollectionRead.md
 docs/Model/PersonaIndependentWrite.md
 docs/Model/PersonaIndependentWriteAddress.md
+docs/Model/PersonaPersonaAuthReturn.md
+docs/Model/PersonaPersonaExternalAuth.md
 docs/Model/PersonaPostAuthRead.md
 docs/Model/PersonaRead.md
 docs/Model/PersonaReadAddress.md
@@ -95,12 +97,12 @@ docs/Model/WebhookObject.md
 docs/Model/WebhookSubscriptionRead.md
 docs/Model/WebhookSubscriptionWrite.md
 git_push.sh
+lib/Api/AIApi.php
 lib/Api/BrandingApi.php
 lib/Api/NotificationApi.php
 lib/Api/PersonaApi.php
 lib/Api/ResolutionCenterApi.php
 lib/Api/SafeCheckoutApi.php
-lib/Api/TransactionApi.php
 lib/Api/UserApi.php
 lib/Api/WebhookApi.php
 lib/ApiException.php
@@ -111,6 +113,7 @@ lib/Model/AddressIndependentWrite.php
 lib/Model/AddressRead.php
 lib/Model/AddressUpdate.php
 lib/Model/AddressWrite.php
+lib/Model/AiHint.php
 lib/Model/ApiClient.php
 lib/Model/Dispute.php
 lib/Model/DisputeCollectionRead.php
@@ -160,6 +163,8 @@ lib/Model/PersonaAddress.php
 lib/Model/PersonaCollectionRead.php
 lib/Model/PersonaIndependentWrite.php
 lib/Model/PersonaIndependentWriteAddress.php
+lib/Model/PersonaPersonaAuthReturn.php
+lib/Model/PersonaPersonaExternalAuth.php
 lib/Model/PersonaPostAuthRead.php
 lib/Model/PersonaRead.php
 lib/Model/PersonaReadAddress.php
@@ -191,12 +196,12 @@ lib/Model/WebhookSubscriptionRead.php
 lib/Model/WebhookSubscriptionWrite.php
 lib/ObjectSerializer.php
 phpunit.xml.dist
+test/Api/AIApiTest.php
 test/Api/BrandingApiTest.php
 test/Api/NotificationApiTest.php
 test/Api/PersonaApiTest.php
 test/Api/ResolutionCenterApiTest.php
 test/Api/SafeCheckoutApiTest.php
-test/Api/TransactionApiTest.php
 test/Api/UserApiTest.php
 test/Api/WebhookApiTest.php
 test/Model/AddressIndependentWriteTest.php
@@ -204,6 +209,7 @@ test/Model/AddressReadTest.php
 test/Model/AddressTest.php
 test/Model/AddressUpdateTest.php
 test/Model/AddressWriteTest.php
+test/Model/AiHintTest.php
 test/Model/ApiClientTest.php
 test/Model/DisputeCollectionReadTest.php
 test/Model/DisputeIndependentWriteTest.php
@@ -251,6 +257,8 @@ test/Model/PersonaAddressTest.php
 test/Model/PersonaCollectionReadTest.php
 test/Model/PersonaIndependentWriteAddressTest.php
 test/Model/PersonaIndependentWriteTest.php
+test/Model/PersonaPersonaAuthReturnTest.php
+test/Model/PersonaPersonaExternalAuthTest.php
 test/Model/PersonaPostAuthReadTest.php
 test/Model/PersonaReadAddressTest.php
 test/Model/PersonaReadTest.php
