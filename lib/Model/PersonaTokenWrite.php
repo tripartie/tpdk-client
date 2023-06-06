@@ -1,6 +1,6 @@
 <?php
 /**
- * UserSupportReadOrganization
+ * PersonaTokenWrite
  *
  * PHP version 7.4
  *
@@ -33,15 +33,16 @@ use \ArrayAccess;
 use \Tripartie\Tpdk\ObjectSerializer;
 
 /**
- * UserSupportReadOrganization Class Doc Comment
+ * PersonaTokenWrite Class Doc Comment
  *
  * @category Class
+ * @description 
  * @package  Tripartie\Tpdk
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  * @implements \ArrayAccess<string, mixed>
  */
-class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonSerializable
+class PersonaTokenWrite implements ModelInterface, ArrayAccess, \JsonSerializable
 {
     public const DISCRIMINATOR = null;
 
@@ -50,7 +51,7 @@ class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonS
       *
       * @var string
       */
-    protected static $openAPIModelName = 'User_SupportRead_organization';
+    protected static $openAPIModelName = 'Persona-TokenWrite';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -58,8 +59,7 @@ class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonS
       * @var string[]
       */
     protected static $openAPITypes = [
-        'id' => 'int',
-        'name' => 'string'
+        'targetUrl' => 'string'
     ];
 
     /**
@@ -70,8 +70,7 @@ class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonS
       * @psalm-var array<string, string|null>
       */
     protected static $openAPIFormats = [
-        'id' => null,
-        'name' => null
+        'targetUrl' => null
     ];
 
     /**
@@ -80,8 +79,7 @@ class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonS
       * @var boolean[]
       */
     protected static array $openAPINullables = [
-        'id' => false,
-		'name' => false
+        'targetUrl' => true
     ];
 
     /**
@@ -170,8 +168,7 @@ class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $attributeMap = [
-        'id' => 'id',
-        'name' => 'name'
+        'targetUrl' => 'targetUrl'
     ];
 
     /**
@@ -180,8 +177,7 @@ class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $setters = [
-        'id' => 'setId',
-        'name' => 'setName'
+        'targetUrl' => 'setTargetUrl'
     ];
 
     /**
@@ -190,8 +186,7 @@ class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonS
      * @var string[]
      */
     protected static $getters = [
-        'id' => 'getId',
-        'name' => 'getName'
+        'targetUrl' => 'getTargetUrl'
     ];
 
     /**
@@ -251,8 +246,7 @@ class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonS
      */
     public function __construct(array $data = null)
     {
-        $this->setIfExists('id', $data ?? [], null);
-        $this->setIfExists('name', $data ?? [], null);
+        $this->setIfExists('targetUrl', $data ?? [], null);
     }
 
     /**
@@ -298,55 +292,35 @@ class UserSupportReadOrganization implements ModelInterface, ArrayAccess, \JsonS
 
 
     /**
-     * Gets id
-     *
-     * @return int|null
-     */
-    public function getId()
-    {
-        return $this->container['id'];
-    }
-
-    /**
-     * Sets id
-     *
-     * @param int|null $id id
-     *
-     * @return self
-     */
-    public function setId($id)
-    {
-        if (is_null($id)) {
-            throw new \InvalidArgumentException('non-nullable id cannot be null');
-        }
-        $this->container['id'] = $id;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
+     * Gets targetUrl
      *
      * @return string|null
      */
-    public function getName()
+    public function getTargetUrl()
     {
-        return $this->container['name'];
+        return $this->container['targetUrl'];
     }
 
     /**
-     * Sets name
+     * Sets targetUrl
      *
-     * @param string|null $name name
+     * @param string|null $targetUrl The URL you wish that Persona to go to without additional MFA. The URL MUST concern that Persona.
      *
      * @return self
      */
-    public function setName($name)
+    public function setTargetUrl($targetUrl)
     {
-        if (is_null($name)) {
-            throw new \InvalidArgumentException('non-nullable name cannot be null');
+        if (is_null($targetUrl)) {
+            array_push($this->openAPINullablesSetToNull, 'targetUrl');
+        } else {
+            $nullablesSetToNull = $this->getOpenAPINullablesSetToNull();
+            $index = array_search('targetUrl', $nullablesSetToNull);
+            if ($index !== FALSE) {
+                unset($nullablesSetToNull[$index]);
+                $this->setOpenAPINullablesSetToNull($nullablesSetToNull);
+            }
         }
-        $this->container['name'] = $name;
+        $this->container['targetUrl'] = $targetUrl;
 
         return $this;
     }

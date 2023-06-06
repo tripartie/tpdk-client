@@ -1,6 +1,6 @@
 <?php
 /**
- * EvidenceReadTest
+ * PersonaTokenWriteTest
  *
  * PHP version 7.4
  *
@@ -32,7 +32,7 @@ namespace Tripartie\Tpdk\Test\Model;
 use PHPUnit\Framework\TestCase;
 
 /**
- * EvidenceReadTest Class Doc Comment
+ * PersonaTokenWriteTest Class Doc Comment
  *
  * @category    Class
  * @description 
@@ -40,7 +40,7 @@ use PHPUnit\Framework\TestCase;
  * @author      OpenAPI Generator team
  * @link        https://openapi-generator.tech
  */
-class EvidenceReadTest extends TestCase
+class PersonaTokenWriteTest extends TestCase
 {
 
     /**
@@ -72,63 +72,18 @@ class EvidenceReadTest extends TestCase
     }
 
     /**
-     * Test "EvidenceRead"
+     * Test "PersonaTokenWrite"
      */
-    public function testEvidenceRead()
+    public function testPersonaTokenWrite()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test attribute "id"
+     * Test attribute "targetUrl"
      */
-    public function testPropertyId()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "status"
-     */
-    public function testPropertyStatus()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "media"
-     */
-    public function testPropertyMedia()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "additionalInformation"
-     */
-    public function testPropertyAdditionalInformation()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "createdAt"
-     */
-    public function testPropertyCreatedAt()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test attribute "updatedAt"
-     */
-    public function testPropertyUpdatedAt()
+    public function testPropertyTargetUrl()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

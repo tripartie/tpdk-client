@@ -323,7 +323,7 @@ try {
 ## `apiPersonasIdtokenPost()`
 
 ```php
-apiPersonasIdtokenPost($id, $personaWrite): \Tripartie\Tpdk\Model\PersonaPostAuthRead
+apiPersonasIdtokenPost($id, $personaTokenWrite): \Tripartie\Tpdk\Model\PersonaPostAuthRead
 ```
 
 Issue authenticated URL for single end-user
@@ -348,10 +348,10 @@ $apiInstance = new Tripartie\Tpdk\Api\PersonaApi(
     $config
 );
 $id = 'id_example'; // string | Persona identifier
-$personaWrite = new \Tripartie\Tpdk\Model\PersonaWrite(); // \Tripartie\Tpdk\Model\PersonaWrite | The new Persona resource
+$personaTokenWrite = new \Tripartie\Tpdk\Model\PersonaTokenWrite(); // \Tripartie\Tpdk\Model\PersonaTokenWrite | The new Persona resource
 
 try {
-    $result = $apiInstance->apiPersonasIdtokenPost($id, $personaWrite);
+    $result = $apiInstance->apiPersonasIdtokenPost($id, $personaTokenWrite);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PersonaApi->apiPersonasIdtokenPost: ', $e->getMessage(), PHP_EOL;
@@ -363,7 +363,7 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **id** | **string**| Persona identifier | |
-| **personaWrite** | [**\Tripartie\Tpdk\Model\PersonaWrite**](../Model/PersonaWrite.md)| The new Persona resource | |
+| **personaTokenWrite** | [**\Tripartie\Tpdk\Model\PersonaTokenWrite**](../Model/PersonaTokenWrite.md)| The new Persona resource | |
 
 ### Return type
 

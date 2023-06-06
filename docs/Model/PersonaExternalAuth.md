@@ -1,4 +1,4 @@
-# # PersonaPersonaExternalAuth
+# # PersonaExternalAuth
 
 ## Properties
 
