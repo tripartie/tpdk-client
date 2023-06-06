@@ -1,4 +1,4 @@
-# # PersonaPersonaAuthReturn
+# # PersonaAuthReturn
 
 ## Properties
 

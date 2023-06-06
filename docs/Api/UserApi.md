@@ -15,7 +15,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 ## `apiPersonasauthenticationPost()`
 
 ```php
-apiPersonasauthenticationPost($personaPersonaExternalAuth): \Tripartie\Tpdk\Model\PersonaPersonaAuthReturn
+apiPersonasauthenticationPost($personaExternalAuth): \Tripartie\Tpdk\Model\PersonaAuthReturn
 ```
 
 Persona Authentication
@@ -49,10 +49,10 @@ $apiInstance = new Tripartie\Tpdk\Api\UserApi(
     new GuzzleHttp\Client(),
     $config
 );
-$personaPersonaExternalAuth = new \Tripartie\Tpdk\Model\PersonaPersonaExternalAuth(); // \Tripartie\Tpdk\Model\PersonaPersonaExternalAuth | The new Persona resource
+$personaExternalAuth = new \Tripartie\Tpdk\Model\PersonaExternalAuth(); // \Tripartie\Tpdk\Model\PersonaExternalAuth | The new Persona resource
 
 try {
-    $result = $apiInstance->apiPersonasauthenticationPost($personaPersonaExternalAuth);
+    $result = $apiInstance->apiPersonasauthenticationPost($personaExternalAuth);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling UserApi->apiPersonasauthenticationPost: ', $e->getMessage(), PHP_EOL;
@@ -63,11 +63,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **personaPersonaExternalAuth** | [**\Tripartie\Tpdk\Model\PersonaPersonaExternalAuth**](../Model/PersonaPersonaExternalAuth.md)| The new Persona resource | |
+| **personaExternalAuth** | [**\Tripartie\Tpdk\Model\PersonaExternalAuth**](../Model/PersonaExternalAuth.md)| The new Persona resource | |
 
 ### Return type
 
-[**\Tripartie\Tpdk\Model\PersonaPersonaAuthReturn**](../Model/PersonaPersonaAuthReturn.md)
+[**\Tripartie\Tpdk\Model\PersonaAuthReturn**](../Model/PersonaAuthReturn.md)
 
 ### Authorization
 
