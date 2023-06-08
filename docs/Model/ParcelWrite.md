@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**carrier** | **string** |  |
-**identifier** | **string** |  |
+**carrier** | **string** |  | [optional]
+**identifier** | **string** |  | [optional]
 **price** | **float** |  | [optional]
 **currency** | **string** |  | [optional] [default to 'EUR']
 

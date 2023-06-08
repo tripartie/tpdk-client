@@ -5,6 +5,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly]
+**persona** | **string** |  | [optional]
+**organization** | **string** |  | [optional]
 **companyName** | **string** |  | [optional]
 **countryCode** | **string** |  | [optional]
 **zipCode** | **string** |  | [optional]

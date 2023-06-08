@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  | [optional]
-**vatNumber** | **string** |  | [optional]
-**commercialRegistryNumber** | **string** |  | [optional]
+**name** | **string** |  |
+**vatNumber** | **string** |  |
+**commercialRegistryNumber** | **string** |  |
 **webhookUrl** | **string** |  | [optional]
 **websiteUrl** | **string** |  | [optional]
 **customBaseUrl** | **string** |  | [optional]
@@ -18,9 +18,9 @@ Name | Type | Description | Notes
 **infoColor** | **string** |  | [optional]
 **successColor** | **string** |  | [optional]
 **warningColor** | **string** |  | [optional]
-**directNotificationToggle** | **bool** |  | [default to true]
-**anonymityLevel** | **string** |  | [default to 'PARTIAL_FIRST_NAME']
+**directNotificationToggle** | **bool** |  | [optional] [default to true]
+**anonymityLevel** | **string** |  | [optional] [default to 'PARTIAL_FIRST_NAME']
 **flatRateEnabled** | **bool** |  | [optional] [readonly]
-**rateCommissionSafeCheckout** | **float** |  |
+**rateCommissionSafeCheckout** | **float** |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

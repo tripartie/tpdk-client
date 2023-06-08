@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly]
+**dispute** | **string** |  | [optional]
 **agent** | **string** |  | [optional]
 **from** | **string** |  | [optional]
 **to** | **string** |  | [optional]

@@ -39,7 +39,6 @@ docs/Model/MetadataIndependentWrite.md
 docs/Model/MetadataRead.md
 docs/Model/MetadataUpdate.md
 docs/Model/MetadataWrite.md
-docs/Model/Notification.md
 docs/Model/NotificationRead.md
 docs/Model/NotificationUpdate.md
 docs/Model/Offer.md
@@ -138,7 +137,6 @@ lib/Model/MetadataRead.php
 lib/Model/MetadataUpdate.php
 lib/Model/MetadataWrite.php
 lib/Model/ModelInterface.php
-lib/Model/Notification.php
 lib/Model/NotificationRead.php
 lib/Model/NotificationUpdate.php
 lib/Model/Offer.php
@@ -235,7 +233,6 @@ test/Model/MetadataTest.php
 test/Model/MetadataUpdateTest.php
 test/Model/MetadataWriteTest.php
 test/Model/NotificationReadTest.php
-test/Model/NotificationTest.php
 test/Model/NotificationUpdateTest.php
 test/Model/OfferCollectionReadTest.php
 test/Model/OfferIndependentWriteSellerTest.php

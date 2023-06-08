@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**rating** | **int** |  | [optional]
+**rating** | **int** |  |
 **comment** | **string** |  | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 
