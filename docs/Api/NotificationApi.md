@@ -13,7 +13,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 ## `apiPersonasIdnotificationsGetCollection()`
 
 ```php
-apiPersonasIdnotificationsGetCollection($id, $page): \Tripartie\Tpdk\Model\Notification[]
+apiPersonasIdnotificationsGetCollection($id, $page): \Tripartie\Tpdk\Model\NotificationRead[]
 ```
 
 Retrieve pending notifications for Persona
@@ -59,7 +59,7 @@ try {
 
 ### Return type
 
-[**\Tripartie\Tpdk\Model\Notification[]**](../Model/Notification.md)
+[**\Tripartie\Tpdk\Model\NotificationRead[]**](../Model/NotificationRead.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ try {
 ## `apiPersonasPersonaIdnotificationsIdPatch()`
 
 ```php
-apiPersonasPersonaIdnotificationsIdPatch($personaId, $id, $notification): \Tripartie\Tpdk\Model\Notification
+apiPersonasPersonaIdnotificationsIdPatch($personaId, $id, $notificationUpdate): \Tripartie\Tpdk\Model\NotificationRead
 ```
 
 Mark as read/unread a notification for Persona
@@ -105,10 +105,10 @@ $apiInstance = new Tripartie\Tpdk\Api\NotificationApi(
 );
 $personaId = 'personaId_example'; // string | Persona identifier
 $id = 'id_example'; // string | Notification identifier
-$notification = new \Tripartie\Tpdk\Model\Notification(); // \Tripartie\Tpdk\Model\Notification | The updated Notification resource
+$notificationUpdate = new \Tripartie\Tpdk\Model\NotificationUpdate(); // \Tripartie\Tpdk\Model\NotificationUpdate | The updated Notification resource
 
 try {
-    $result = $apiInstance->apiPersonasPersonaIdnotificationsIdPatch($personaId, $id, $notification);
+    $result = $apiInstance->apiPersonasPersonaIdnotificationsIdPatch($personaId, $id, $notificationUpdate);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NotificationApi->apiPersonasPersonaIdnotificationsIdPatch: ', $e->getMessage(), PHP_EOL;
@@ -121,11 +121,11 @@ try {
 | ------------- | ------------- | ------------- | ------------- |
 | **personaId** | **string**| Persona identifier | |
 | **id** | **string**| Notification identifier | |
-| **notification** | [**\Tripartie\Tpdk\Model\Notification**](../Model/Notification.md)| The updated Notification resource | |
+| **notificationUpdate** | [**\Tripartie\Tpdk\Model\NotificationUpdate**](../Model/NotificationUpdate.md)| The updated Notification resource | |
 
 ### Return type
 
-[**\Tripartie\Tpdk\Model\Notification**](../Model/Notification.md)
+[**\Tripartie\Tpdk\Model\NotificationRead**](../Model/NotificationRead.md)
 
 ### Authorization
 

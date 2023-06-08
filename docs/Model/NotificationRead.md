@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**type** | **string** |  |
-**seen** | **bool** |  | [optional]
+**type** | **string** |  | [optional]
+**seen** | **bool** |  |
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
