@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**captcha** | **string** |  | [optional]
+**captcha** | **string** |  |
 **firstName** | **string** |  |
 **lastName** | **string** |  |
 **publicName** | **string** |  |

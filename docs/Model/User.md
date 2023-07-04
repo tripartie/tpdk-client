@@ -31,7 +31,7 @@ Name | Type | Description | Notes
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
 **consentMailNotification** | **bool** |  |
 **consentMailAds** | **bool** |  |
-**api** | [**\Tripartie\Tpdk\Model\UserApi**](UserApi.md) |  | [optional]
+**api** | **string** |  | [optional]
 **organization** | **string** |  | [optional]
 **username** | **string** | A visual identifier that represents this user. | [optional] [readonly]
 **salt** | **string** |  | [optional] [readonly]

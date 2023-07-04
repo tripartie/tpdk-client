@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **title** | **string** |  | [optional]
 **unitPrice** | **float** |  | [optional]
 **currencyCode** | **string** |  | [optional] [default to 'EUR']
-**itemCount** | **int** |  | [default to 1]
-**condition** | **string** |  | [default to 'USED']
+**itemCount** | **int** |  | [optional] [default to 1]
+**condition** | **string** |  | [optional] [default to 'USED']
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

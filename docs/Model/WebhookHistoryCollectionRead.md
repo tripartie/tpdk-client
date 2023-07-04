@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event** | **string** |  |
 **responseCode** | **int** |  |
+**occurredAt** | **\DateTime** |  |
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **attemptedAt** | **\DateTime** |  | [optional] [readonly]
 **retryCount** | **int** |  |

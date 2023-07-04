@@ -7,13 +7,14 @@ Name | Type | Description | Notes
 **ulid** | **string** |  |
 **transaction** | [**\Tripartie\Tpdk\Model\TransactionRead**](TransactionRead.md) |  | [optional]
 **status** | **string** |  | [default to 'CREATED']
-**itemCount** | **int** |  | [default to 1]
-**issueType** | **string** |  |
+**redirectUrl** | **string** | Fill-in that field IF you intend to redirect your customer instead of using a WebView. | [optional]
+**itemCount** | **int** |  | [optional] [default to 1]
+**issueType** | **string** |  | [optional]
 **issueInDescriptionType** | **string** | To be set only in conjunction of issueType &#x3D; NOT_AS_DESCRIBED. | [optional]
 **issueDetails** | **string** |  | [optional]
 **complainantTruthfulnessScore** | **int** |  | [default to 100]
 **sellerTruthfulnessScore** | **int** |  | [default to 100]
-**complainantStake** | **string** |  |
+**complainantStake** | **string** |  | [optional]
 **inferredStake** | **string** |  | [optional]
 **recommendedSolution** | **string** |  | [optional]
 **recommendedPartialRefundAmount** | **int** |  | [optional]
@@ -22,7 +23,7 @@ Name | Type | Description | Notes
 **counterSolution** | **string** |  | [optional]
 **counterPartialRefundAmount** | **int** |  | [optional]
 **complainantApproval** | **bool** |  | [optional]
-**sellerApproval** | **bool** |  |
+**sellerApproval** | **bool** |  | [optional]
 **platformSolution** | **string** |  | [optional]
 **platformPartialRefundAmount** | **int** |  | [optional]
 **platformApproval** | **bool** |  | [optional]
@@ -45,15 +46,18 @@ Name | Type | Description | Notes
 **riskScore** | **int** | That score is regularly updated, each action taken can potentially update that value. A value close to zero mean zero risk and close to a hundred mean risky. | [optional]
 **externalPurchaseCount** | **int** | Knowing the statistics on your user is used to better know its profile when you do not use the Safe-Checkout feature. Although it is not required, we recommend that you keep us informed. | [optional]
 **externalSellCount** | **int** | Knowing the statistics on your user is used to better know its profile when you do not use the Safe-Checkout feature. Although it is not required, we recommend that you keep us informed. | [optional]
-**metadata** | [**\Tripartie\Tpdk\Model\MetadataRead[]**](MetadataRead.md) | You can assign different meta to your Persona object for different purposes. eg. Ease searching. |
+**metadata** | [**\Tripartie\Tpdk\Model\MetadataRead[]**](MetadataRead.md) | You can assign different meta to your Persona object for different purposes. eg. Ease searching. | [optional]
 **offerCount** | **int** | Issued Offers count owned by a given Persona | [optional] [readonly]
 **purchaseCount** | **int** |  | [optional] [readonly]
 **publicUrl** | **string** | If specified, there would be not need for you to fill-in details. Must be accessible over WAN. | [optional]
+**organization** | [**\Tripartie\Tpdk\Model\OfferReadOrganization**](OfferReadOrganization.md) |  | [optional]
+**seller** | **string** | If the seller is actually YOUR organization, set it to NULL. |
 **nature** | **string** | This WILL affect the assigned workflow. Choosing service will disable delivery for example. Refer to our technical hub for more information. | [default to 'physical_item']
 **title** | **string** |  | [optional]
 **description** | **string** |  | [optional]
 **unitPrice** | **float** |  | [optional]
 **currencyCode** | **string** |  | [optional] [default to 'EUR']
-**condition** | **string** |  | [default to 'USED']
+**condition** | **string** |  | [optional] [default to 'USED']
+**medias** | [**\Tripartie\Tpdk\Model\MediaRead[]**](MediaRead.md) |  |
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

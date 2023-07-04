@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 **transaction** | [**\Tripartie\Tpdk\Model\TransactionCollectionRead**](TransactionCollectionRead.md) |  | [optional]
 **status** | **string** |  | [default to 'CREATED']
 **itemCount** | **int** | The dispute may concern only PART of the package. Specify it there. | [optional]
-**issueType** | **string** |  |
+**issueType** | **string** |  | [optional]
 **issueInDescriptionType** | **string** | To be set only in conjunction of issueType &#x3D; NOT_AS_DESCRIBED. | [optional]
-**complainantStake** | **string** |  |
+**complainantStake** | **string** |  | [optional]
 **inferredStake** | **string** |  | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]

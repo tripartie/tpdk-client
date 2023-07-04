@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 **riskScore** | **int** | That score is regularly updated, each action taken can potentially update that value. A value close to zero mean zero risk and close to a hundred mean risky. | [optional]
 **externalPurchaseCount** | **int** | Knowing the statistics on your user is used to better know its profile when you do not use the Safe-Checkout feature. Although it is not required, we recommend that you keep us informed. | [optional]
 **externalSellCount** | **int** | Knowing the statistics on your user is used to better know its profile when you do not use the Safe-Checkout feature. Although it is not required, we recommend that you keep us informed. | [optional]
-**metadata** | [**\Tripartie\Tpdk\Model\MetadataRead[]**](MetadataRead.md) | You can assign different meta to your Persona object for different purposes. eg. Ease searching. |
+**metadata** | [**\Tripartie\Tpdk\Model\MetadataRead[]**](MetadataRead.md) | You can assign different meta to your Persona object for different purposes. eg. Ease searching. | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
 **offerCount** | **int** | Issued Offers count owned by a given Persona | [optional] [readonly]

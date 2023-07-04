@@ -14,7 +14,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | [**apiDisputesUlidevidencesIdDelete()**](ResolutionCenterApi.md#apiDisputesUlidevidencesIdDelete) | **DELETE** /disputes/{ulid}/evidences/{id} | Withdraw an Evidence from a Dispute |
 | [**apiDisputesUlidevidencesIdmediaPost()**](ResolutionCenterApi.md#apiDisputesUlidevidencesIdmediaPost) | **POST** /disputes/{ulid}/evidences/{id}/media | Upload attachment in regard of described Evidence |
 | [**apiDisputesUlidevidencesPost()**](ResolutionCenterApi.md#apiDisputesUlidevidencesPost) | **POST** /disputes/{ulid}/evidences | Submit an Evidence to the Dispute case |
-| [**apiDisputesUlidparcelsGetCollection()**](ResolutionCenterApi.md#apiDisputesUlidparcelsGetCollection) | **GET** /disputes/{ulid}/parcels | Retrieves the collection of Parcel resources. |
+| [**apiDisputesUlidparcelsGet()**](ResolutionCenterApi.md#apiDisputesUlidparcelsGet) | **GET** /disputes/{ulid}/parcels | Read single parcel state |
 | [**apiDisputesUlidparcelsIdDelete()**](ResolutionCenterApi.md#apiDisputesUlidparcelsIdDelete) | **DELETE** /disputes/{ulid}/parcels/{id} | Removes the Parcel resource. |
 | [**apiDisputesUlidparcelsPost()**](ResolutionCenterApi.md#apiDisputesUlidparcelsPost) | **POST** /disputes/{ulid}/parcels | Creates a Parcel resource. |
 | [**apiOffersUlidmediasPost()**](ResolutionCenterApi.md#apiOffersUlidmediasPost) | **POST** /offers/{ulid}/medias | Upload a picture for a given Offer |
@@ -721,15 +721,15 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `apiDisputesUlidparcelsGetCollection()`
+## `apiDisputesUlidparcelsGet()`
 
 ```php
-apiDisputesUlidparcelsGetCollection($ulid, $page): object[]
+apiDisputesUlidparcelsGet($ulid): \Tripartie\Tpdk\Model\ParcelRead
 ```
 
-Retrieves the collection of Parcel resources.
+Read single parcel state
 
-Retrieves the collection of Parcel resources.
+Retrieves a Parcel resource.
 
 ### Example
 
@@ -759,13 +759,12 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     $config
 );
 $ulid = 'ulid_example'; // string | Dispute identifier
-$page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->apiDisputesUlidparcelsGetCollection($ulid, $page);
+    $result = $apiInstance->apiDisputesUlidparcelsGet($ulid);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ResolutionCenterApi->apiDisputesUlidparcelsGetCollection: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ResolutionCenterApi->apiDisputesUlidparcelsGet: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -774,11 +773,10 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ulid** | **string**| Dispute identifier | |
-| **page** | **int**| The collection page number | [optional] [default to 1] |
 
 ### Return type
 
-**object[]**
+[**\Tripartie\Tpdk\Model\ParcelRead**](../Model/ParcelRead.md)
 
 ### Authorization
 
