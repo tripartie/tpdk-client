@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **url** | **string** |  |
 **responseCode** | **int** |  |
 **responseBody** | **string** |  |
+**occurredAt** | **\DateTime** |  |
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **attemptedAt** | **\DateTime** |  | [optional] [readonly]
 **retryCount** | **int** |  |
