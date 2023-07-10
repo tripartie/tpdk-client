@@ -457,7 +457,7 @@ try {
 ## `apiDisputesUlidevidencesGetCollection()`
 
 ```php
-apiDisputesUlidevidencesGetCollection($ulid, $page): \Tripartie\Tpdk\Model\EvidenceRead[]
+apiDisputesUlidevidencesGetCollection($ulid): \Tripartie\Tpdk\Model\EvidenceRead[]
 ```
 
 Retrieve all Evidences in Dispute
@@ -489,10 +489,9 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     $config
 );
 $ulid = 'ulid_example'; // string | Dispute identifier
-$page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->apiDisputesUlidevidencesGetCollection($ulid, $page);
+    $result = $apiInstance->apiDisputesUlidevidencesGetCollection($ulid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ResolutionCenterApi->apiDisputesUlidevidencesGetCollection: ', $e->getMessage(), PHP_EOL;
@@ -504,7 +503,6 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ulid** | **string**| Dispute identifier | |
-| **page** | **int**| The collection page number | [optional] [default to 1] |
 
 ### Return type
 
