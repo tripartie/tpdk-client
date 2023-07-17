@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **thumbnail** | **string** | Associated 374x374 pixels small thumbnail | [optional]
 **original** | **string** |  | [optional]
 **owner** | **string** |  | [optional]
+**offers** | **string[]** |  | [optional] [readonly]
 **offer** | **string** |  | [optional]
 **thumbnailUrl** | **string** |  | [optional] [readonly]
 

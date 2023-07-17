@@ -404,7 +404,7 @@ try {
 ## `apiOffersUlidtransactionsGetCollection()`
 
 ```php
-apiOffersUlidtransactionsGetCollection($ulid, $page, $orderStatus, $metadata, $status, $existsDispute): \Tripartie\Tpdk\Model\TransactionCollectionRead[]
+apiOffersUlidtransactionsGetCollection($ulid, $page, $orderStatus, $metadata, $status): \Tripartie\Tpdk\Model\TransactionCollectionRead[]
 ```
 
 Retrieve Payment Intents for Offer
@@ -438,10 +438,9 @@ $page = 1; // int | The collection page number
 $orderStatus = 'orderStatus_example'; // string | 
 $metadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
 $status = CREATED; // string | Filter on a limited subset of status
-$existsDispute = True; // bool | 
 
 try {
-    $result = $apiInstance->apiOffersUlidtransactionsGetCollection($ulid, $page, $orderStatus, $metadata, $status, $existsDispute);
+    $result = $apiInstance->apiOffersUlidtransactionsGetCollection($ulid, $page, $orderStatus, $metadata, $status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SafeCheckoutApi->apiOffersUlidtransactionsGetCollection: ', $e->getMessage(), PHP_EOL;
@@ -457,7 +456,6 @@ try {
 | **orderStatus** | **string**|  | [optional] |
 | **metadata** | [**string[]**](../Model/string.md)| Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \&quot;null\&quot; for desired value. | [optional] |
 | **status** | **string**| Filter on a limited subset of status | [optional] |
-| **existsDispute** | **bool**|  | [optional] |
 
 ### Return type
 
@@ -926,7 +924,7 @@ try {
 ## `apiTransactionsGetCollection()`
 
 ```php
-apiTransactionsGetCollection($page, $orderStatus, $metadata, $status, $existsDispute): \Tripartie\Tpdk\Model\TransactionCollectionRead[]
+apiTransactionsGetCollection($page, $orderStatus, $metadata, $status): \Tripartie\Tpdk\Model\TransactionCollectionRead[]
 ```
 
 Retrieves the collection of Transaction resources.
@@ -959,10 +957,9 @@ $page = 1; // int | The collection page number
 $orderStatus = 'orderStatus_example'; // string | 
 $metadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
 $status = CREATED; // string | Filter on a limited subset of status
-$existsDispute = True; // bool | 
 
 try {
-    $result = $apiInstance->apiTransactionsGetCollection($page, $orderStatus, $metadata, $status, $existsDispute);
+    $result = $apiInstance->apiTransactionsGetCollection($page, $orderStatus, $metadata, $status);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SafeCheckoutApi->apiTransactionsGetCollection: ', $e->getMessage(), PHP_EOL;
@@ -977,7 +974,6 @@ try {
 | **orderStatus** | **string**|  | [optional] |
 | **metadata** | [**string[]**](../Model/string.md)| Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \&quot;null\&quot; for desired value. | [optional] |
 | **status** | **string**| Filter on a limited subset of status | [optional] |
-| **existsDispute** | **bool**|  | [optional] |
 
 ### Return type
 
