@@ -14,8 +14,9 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | [**apiDisputesUlidevidencesIdDelete()**](ResolutionCenterApi.md#apiDisputesUlidevidencesIdDelete) | **DELETE** /disputes/{ulid}/evidences/{id} | Withdraw an Evidence from a Dispute |
 | [**apiDisputesUlidevidencesIdmediaPost()**](ResolutionCenterApi.md#apiDisputesUlidevidencesIdmediaPost) | **POST** /disputes/{ulid}/evidences/{id}/media | Upload attachment in regard of described Evidence |
 | [**apiDisputesUlidevidencesPost()**](ResolutionCenterApi.md#apiDisputesUlidevidencesPost) | **POST** /disputes/{ulid}/evidences | Submit an Evidence to the Dispute case |
-| [**apiDisputesUlidparcelsGet()**](ResolutionCenterApi.md#apiDisputesUlidparcelsGet) | **GET** /disputes/{ulid}/parcels | Read single parcel state |
+| [**apiDisputesUlidparcelsGetCollection()**](ResolutionCenterApi.md#apiDisputesUlidparcelsGetCollection) | **GET** /disputes/{ulid}/parcels | Retrieves the collection of Parcel resources. |
 | [**apiDisputesUlidparcelsIdDelete()**](ResolutionCenterApi.md#apiDisputesUlidparcelsIdDelete) | **DELETE** /disputes/{ulid}/parcels/{id} | Removes the Parcel resource. |
+| [**apiDisputesUlidparcelsIdGet()**](ResolutionCenterApi.md#apiDisputesUlidparcelsIdGet) | **GET** /disputes/{ulid}/parcels/{id} | Read single parcel state |
 | [**apiDisputesUlidparcelsPost()**](ResolutionCenterApi.md#apiDisputesUlidparcelsPost) | **POST** /disputes/{ulid}/parcels | Creates a Parcel resource. |
 | [**apiOffersUlidmediasPost()**](ResolutionCenterApi.md#apiOffersUlidmediasPost) | **POST** /offers/{ulid}/medias | Upload a picture for a given Offer |
 
@@ -457,7 +458,7 @@ try {
 ## `apiDisputesUlidevidencesGetCollection()`
 
 ```php
-apiDisputesUlidevidencesGetCollection($ulid, $page): \Tripartie\Tpdk\Model\EvidenceRead[]
+apiDisputesUlidevidencesGetCollection($ulid): \Tripartie\Tpdk\Model\EvidenceRead[]
 ```
 
 Retrieve all Evidences in Dispute
@@ -488,11 +489,10 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
-$page = 1; // int | The collection page number
+$ulid = 'ulid_example'; // string | 
 
 try {
-    $result = $apiInstance->apiDisputesUlidevidencesGetCollection($ulid, $page);
+    $result = $apiInstance->apiDisputesUlidevidencesGetCollection($ulid);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ResolutionCenterApi->apiDisputesUlidevidencesGetCollection: ', $e->getMessage(), PHP_EOL;
@@ -503,8 +503,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
-| **page** | **int**| The collection page number | [optional] [default to 1] |
+| **ulid** | **string**|  | |
 
 ### Return type
 
@@ -557,8 +556,8 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
-$id = 'id_example'; // string | Evidence identifier
+$ulid = 'ulid_example'; // string | 
+$id = 56; // int | 
 
 try {
     $apiInstance->apiDisputesUlidevidencesIdDelete($ulid, $id);
@@ -571,8 +570,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
-| **id** | **string**| Evidence identifier | |
+| **ulid** | **string**|  | |
+| **id** | **int**|  | |
 
 ### Return type
 
@@ -620,8 +619,8 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
-$id = 'id_example'; // string | Evidence identifier
+$ulid = 'ulid_example'; // string | 
+$id = 56; // int | 
 $file = "/path/to/file.txt"; // \SplFileObject
 
 try {
@@ -636,8 +635,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
-| **id** | **string**| Evidence identifier | |
+| **ulid** | **string**|  | |
+| **id** | **int**|  | |
 | **file** | **\SplFileObject****\SplFileObject**|  | [optional] |
 
 ### Return type
@@ -686,7 +685,7 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
+$ulid = 'ulid_example'; // string | 
 $evidenceWrite = new \Tripartie\Tpdk\Model\EvidenceWrite(); // \Tripartie\Tpdk\Model\EvidenceWrite | The new Evidence resource
 
 try {
@@ -701,7 +700,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
+| **ulid** | **string**|  | |
 | **evidenceWrite** | [**\Tripartie\Tpdk\Model\EvidenceWrite**](../Model/EvidenceWrite.md)| The new Evidence resource | |
 
 ### Return type
@@ -721,15 +720,15 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `apiDisputesUlidparcelsGet()`
+## `apiDisputesUlidparcelsGetCollection()`
 
 ```php
-apiDisputesUlidparcelsGet($ulid): \Tripartie\Tpdk\Model\ParcelRead
+apiDisputesUlidparcelsGetCollection($ulid, $page): object[]
 ```
 
-Read single parcel state
+Retrieves the collection of Parcel resources.
 
-Retrieves a Parcel resource.
+Retrieves the collection of Parcel resources.
 
 ### Example
 
@@ -759,12 +758,13 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     $config
 );
 $ulid = 'ulid_example'; // string | Dispute identifier
+$page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->apiDisputesUlidparcelsGet($ulid);
+    $result = $apiInstance->apiDisputesUlidparcelsGetCollection($ulid, $page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ResolutionCenterApi->apiDisputesUlidparcelsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ResolutionCenterApi->apiDisputesUlidparcelsGetCollection: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -773,10 +773,11 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **ulid** | **string**| Dispute identifier | |
+| **page** | **int**| The collection page number | [optional] [default to 1] |
 
 ### Return type
 
-[**\Tripartie\Tpdk\Model\ParcelRead**](../Model/ParcelRead.md)
+**object[]**
 
 ### Authorization
 
@@ -820,8 +821,8 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
-$id = 'id_example'; // string | Parcel identifier
+$ulid = 'ulid_example'; // string | 
+$id = 56; // int | 
 
 try {
     $apiInstance->apiDisputesUlidparcelsIdDelete($ulid, $id);
@@ -834,8 +835,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
-| **id** | **string**| Parcel identifier | |
+| **ulid** | **string**|  | |
+| **id** | **int**|  | |
 
 ### Return type
 
@@ -849,6 +850,78 @@ void (empty response body)
 
 - **Content-Type**: Not defined
 - **Accept**: Not defined
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `apiDisputesUlidparcelsIdGet()`
+
+```php
+apiDisputesUlidparcelsIdGet($ulid, $id): \Tripartie\Tpdk\Model\ParcelRead
+```
+
+Read single parcel state
+
+Retrieves a Parcel resource.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$ulid = 'ulid_example'; // string | 
+$id = 56; // int | 
+
+try {
+    $result = $apiInstance->apiDisputesUlidparcelsIdGet($ulid, $id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ResolutionCenterApi->apiDisputesUlidparcelsIdGet: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ulid** | **string**|  | |
+| **id** | **int**|  | |
+
+### Return type
+
+[**\Tripartie\Tpdk\Model\ParcelRead**](../Model/ParcelRead.md)
+
+### Authorization
+
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -958,7 +1031,7 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Offer identifier
+$ulid = 'ulid_example'; // string | 
 $file = "/path/to/file.txt"; // \SplFileObject
 
 try {
@@ -973,7 +1046,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Offer identifier | |
+| **ulid** | **string**|  | |
 | **file** | **\SplFileObject****\SplFileObject**|  | [optional] |
 
 ### Return type

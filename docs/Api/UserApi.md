@@ -10,6 +10,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | [**apiApiClientsPost()**](UserApi.md#apiApiClientsPost) | **POST** /api-clients | Creates a ApiClient resource. |
 | [**apiMeGet()**](UserApi.md#apiMeGet) | **GET** /me | Retrieves a User resource. |
 | [**apiPersonasauthenticationPost()**](UserApi.md#apiPersonasauthenticationPost) | **POST** /personas/authentication | Persona Authentication |
+| [**apiPersonasmeGet()**](UserApi.md#apiPersonasmeGet) | **GET** /personas/me | Retrieve your authenticated Persona |
 | [**apiPersonasregisterPost()**](UserApi.md#apiPersonasregisterPost) | **POST** /personas/register | Persona external registration |
 | [**apiRegisterPost()**](UserApi.md#apiRegisterPost) | **POST** /register | Organization onboarding |
 | [**apiUsersGetCollection()**](UserApi.md#apiUsersGetCollection) | **GET** /users | Retrieves the collection of User resources. |
@@ -396,6 +397,65 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `apiPersonasmeGet()`
+
+```php
+apiPersonasmeGet(): \Tripartie\Tpdk\Model\PersonaRead
+```
+
+Retrieve your authenticated Persona
+
+Retrieves a Persona resource.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
+
+
+$apiInstance = new Tripartie\Tpdk\Api\UserApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+
+try {
+    $result = $apiInstance->apiPersonasmeGet();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->apiPersonasmeGet: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Tripartie\Tpdk\Model\PersonaRead**](../Model/PersonaRead.md)
+
+### Authorization
+
+[personaAuthKey](../../README.md#personaAuthKey)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

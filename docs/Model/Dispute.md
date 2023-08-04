@@ -32,6 +32,8 @@ Name | Type | Description | Notes
 **arbitrationBy** | **string** |  | [optional]
 **parcels** | **string[]** |  |
 **messages** | [**\Tripartie\Tpdk\Model\Message[]**](Message.md) |  |
+**evidences** | **string[]** |  | [optional] [readonly]
+**evaluations** | **string[]** |  | [optional] [readonly]
 **views** | [**\Tripartie\Tpdk\Model\View[]**](View.md) |  |
 **metadata** | [**\Tripartie\Tpdk\Model\Metadata[]**](Metadata.md) |  |
 **createdAt** | **\DateTime** |  | [optional] [readonly]

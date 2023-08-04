@@ -104,7 +104,7 @@ $apiInstance = new Tripartie\Tpdk\Api\BrandingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Organization identifier
+$id = 'id_example'; // string | Media identifier
 
 try {
     $apiInstance->apiOrganizationsIdiconDelete($id);
@@ -117,7 +117,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Organization identifier | |
+| **id** | **string**| Media identifier | |
 
 ### Return type
 
@@ -165,7 +165,7 @@ $apiInstance = new Tripartie\Tpdk\Api\BrandingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Organization identifier
+$id = 'id_example'; // string | Media identifier
 $file = "/path/to/file.txt"; // \SplFileObject
 
 try {
@@ -180,7 +180,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Organization identifier | |
+| **id** | **string**| Media identifier | |
 | **file** | **\SplFileObject****\SplFileObject**|  | [optional] |
 
 ### Return type
@@ -229,7 +229,7 @@ $apiInstance = new Tripartie\Tpdk\Api\BrandingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Organization identifier
+$id = 'id_example'; // string | Media identifier
 
 try {
     $apiInstance->apiOrganizationsIdlogoDelete($id);
@@ -242,7 +242,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Organization identifier | |
+| **id** | **string**| Media identifier | |
 
 ### Return type
 
@@ -290,7 +290,7 @@ $apiInstance = new Tripartie\Tpdk\Api\BrandingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Organization identifier
+$id = 'id_example'; // string | Media identifier
 $file = "/path/to/file.txt"; // \SplFileObject
 
 try {
@@ -305,7 +305,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Organization identifier | |
+| **id** | **string**| Media identifier | |
 | **file** | **\SplFileObject****\SplFileObject**|  | [optional] |
 
 ### Return type
