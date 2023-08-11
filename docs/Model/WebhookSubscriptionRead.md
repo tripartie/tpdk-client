@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**event** | **string** |  |
+**event** | **string** |  | [optional]
 **callbackUrl** | **string** |  |
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 
