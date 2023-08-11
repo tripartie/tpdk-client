@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **itemCount** | **int** | The dispute may concern only PART of the package. Specify it there. | [optional]
 **issueType** | **string** |  | [optional]
 **issueInDescriptionType** | **string** | To be set only in conjunction of issueType &#x3D; NOT_AS_DESCRIBED. | [optional]
+**issueMentionedInOffer** | **bool** |  | [optional]
 **issueDetails** | **string** |  | [optional]
 **complainantTruthfulnessScore** | **int** |  | [default to 100]
 **sellerTruthfulnessScore** | **int** |  | [default to 100]
@@ -32,7 +33,7 @@ Name | Type | Description | Notes
 **arbitrationBy** | **string** |  | [optional]
 **parcels** | **string[]** |  |
 **messages** | [**\Tripartie\Tpdk\Model\Message[]**](Message.md) |  |
-**evidences** | **string[]** |  | [optional] [readonly]
+**evidences** | **string[]** |  |
 **evaluations** | **string[]** |  | [optional] [readonly]
 **views** | [**\Tripartie\Tpdk\Model\View[]**](View.md) |  |
 **metadata** | [**\Tripartie\Tpdk\Model\Metadata[]**](Metadata.md) |  |
