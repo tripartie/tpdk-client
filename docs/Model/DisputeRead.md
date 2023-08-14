@@ -32,6 +32,8 @@ Name | Type | Description | Notes
 **parcels** | [**\Tripartie\Tpdk\Model\ParcelRead[]**](ParcelRead.md) |  |
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
+**statusExpiration** | **\DateTime** | Yield if eligible the date-time at which the dispute state expire. | [optional] [readonly]
+**awaitedParty** | **string** | Determine who is awaited (actor) for the next transition | [optional] [readonly]
 **iri** | **string** |  | [optional] [readonly]
 **messageCount** | **int** |  | [optional] [readonly]
 
