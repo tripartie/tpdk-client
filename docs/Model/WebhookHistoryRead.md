@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **event** | **string** |  |
 **url** | **string** |  |
-**responseCode** | **int** |  |
-**responseBody** | **string** |  |
+**responseCode** | **int** |  | [optional]
+**responseBody** | **string** |  | [optional]
 **occurredAt** | **\DateTime** |  |
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **attemptedAt** | **\DateTime** |  | [optional] [readonly]
