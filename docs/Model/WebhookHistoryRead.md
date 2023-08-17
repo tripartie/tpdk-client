@@ -4,8 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional] [readonly]
+**objectId** | **string** |  | [optional]
 **event** | **string** |  |
 **url** | **string** |  |
+**normalizedObject** | **string[]** |  | [optional]
 **responseCode** | **int** |  | [optional]
 **responseBody** | **string** |  | [optional]
 **occurredAt** | **\DateTime** |  |

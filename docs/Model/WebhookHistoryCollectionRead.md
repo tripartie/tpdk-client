@@ -4,6 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**id** | **int** |  | [optional] [readonly]
+**objectId** | **string** |  | [optional]
 **event** | **string** |  |
 **responseCode** | **int** |  | [optional]
 **occurredAt** | **\DateTime** |  |
