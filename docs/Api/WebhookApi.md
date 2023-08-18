@@ -15,7 +15,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 ## `apiWebhookHistoriesGetCollection()`
 
 ```php
-apiWebhookHistoriesGetCollection($page, $event, $event2): \Tripartie\Tpdk\Model\WebhookHistoryCollectionRead[]
+apiWebhookHistoriesGetCollection($page, $event, $event2, $objectId): \Tripartie\Tpdk\Model\WebhookHistoryCollectionRead[]
 ```
 
 Retrieves the collection of WebhookHistory resources.
@@ -47,9 +47,10 @@ $apiInstance = new Tripartie\Tpdk\Api\WebhookApi(
 $page = 1; // int | The collection page number
 $event = 'event_example'; // string | 
 $event2 = array('event_example'); // string[] | 
+$objectId = 'objectId_example'; // string | 
 
 try {
-    $result = $apiInstance->apiWebhookHistoriesGetCollection($page, $event, $event2);
+    $result = $apiInstance->apiWebhookHistoriesGetCollection($page, $event, $event2, $objectId);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->apiWebhookHistoriesGetCollection: ', $e->getMessage(), PHP_EOL;
@@ -63,6 +64,7 @@ try {
 | **page** | **int**| The collection page number | [optional] [default to 1] |
 | **event** | **string**|  | [optional] |
 | **event2** | [**string[]**](../Model/string.md)|  | [optional] |
+| **objectId** | **string**|  | [optional] |
 
 ### Return type
 
