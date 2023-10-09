@@ -7,10 +7,9 @@ Name | Type | Description | Notes
 **name** | **string** |  |
 **vatNumber** | **string** |  |
 **commercialRegistryNumber** | **string** |  |
-**webhookUrl** | **string** |  | [optional]
 **websiteUrl** | **string** |  | [optional]
 **customBaseUrl** | **string** |  | [optional]
-**billingAddress** | [**\Tripartie\Tpdk\Model\OrganizationUpdateBillingAddress**](OrganizationUpdateBillingAddress.md) |  | [optional]
+**billingAddress** | [**\Tripartie\Tpdk\Model\AddressUpdate**](AddressUpdate.md) |  | [optional]
 **primaryColor** | **string** |  | [optional]
 **secondaryColor** | **string** |  | [optional]
 **accentColor** | **string** |  | [optional]

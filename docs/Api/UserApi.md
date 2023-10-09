@@ -8,6 +8,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | [**apiApiClientsIdentifierDelete()**](UserApi.md#apiApiClientsIdentifierDelete) | **DELETE** /api-clients/{identifier} | Removes the ApiClient resource. |
 | [**apiApiClientsIdentifierGet()**](UserApi.md#apiApiClientsIdentifierGet) | **GET** /api-clients/{identifier} | Retrieves a ApiClient resource. |
 | [**apiApiClientsPost()**](UserApi.md#apiApiClientsPost) | **POST** /api-clients | Creates a ApiClient resource. |
+| [**apiInvitePost()**](UserApi.md#apiInvitePost) | **POST** /invite | Organization invite |
 | [**apiMeGet()**](UserApi.md#apiMeGet) | **GET** /me | Retrieves a User resource. |
 | [**apiPersonasauthenticationPost()**](UserApi.md#apiPersonasauthenticationPost) | **POST** /personas/authentication | Persona Authentication |
 | [**apiPersonasmeGet()**](UserApi.md#apiPersonasmeGet) | **GET** /personas/me | Retrieve your authenticated Persona |
@@ -256,6 +257,76 @@ try {
 ### Authorization
 
 [jwtPersonalKey](../../README.md#jwtPersonalKey)
+
+### HTTP request headers
+
+- **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `apiInvitePost()`
+
+```php
+apiInvitePost($userInvite): \Tripartie\Tpdk\Model\UserPostRegisterRead
+```
+
+Organization invite
+
+Invite a user to your organization workspace
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Tripartie\Tpdk\Api\UserApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$userInvite = new \Tripartie\Tpdk\Model\UserInvite(); // \Tripartie\Tpdk\Model\UserInvite | The new User resource
+
+try {
+    $result = $apiInstance->apiInvitePost($userInvite);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling UserApi->apiInvitePost: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **userInvite** | [**\Tripartie\Tpdk\Model\UserInvite**](../Model/UserInvite.md)| The new User resource | |
+
+### Return type
+
+[**\Tripartie\Tpdk\Model\UserPostRegisterRead**](../Model/UserPostRegisterRead.md)
+
+### Authorization
+
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 

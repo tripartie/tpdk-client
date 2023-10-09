@@ -28,8 +28,11 @@ Name | Type | Description | Notes
 **platformSolution** | **string** |  | [optional]
 **platformPartialRefundAmount** | **int** |  | [optional]
 **platformApproval** | **bool** |  | [optional]
+**platformActorType** | **string** |  | [optional]
 **arbitrationBy** | **string** |  | [optional]
 **parcels** | [**\Tripartie\Tpdk\Model\ParcelRead[]**](ParcelRead.md) |  |
+**metadata** | [**\Tripartie\Tpdk\Model\MetadataRead[]**](MetadataRead.md) |  |
+**events** | [**\Tripartie\Tpdk\Model\WorkflowEventRead[]**](WorkflowEventRead.md) |  | [optional] [readonly]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
 **statusExpiration** | **\DateTime** | Yield if eligible the date-time at which the dispute state expire. | [optional] [readonly]

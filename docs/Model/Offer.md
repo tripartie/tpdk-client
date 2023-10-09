@@ -32,5 +32,6 @@ Name | Type | Description | Notes
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
 **iri** | **string** |  | [optional] [readonly]
+**halfPricePoint** | **float** |  | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
