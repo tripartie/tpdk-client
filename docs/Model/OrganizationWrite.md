@@ -9,6 +9,6 @@ Name | Type | Description | Notes
 **vatNumber** | **string** |  | [optional]
 **commercialRegistryNumber** | **string** |  | [optional]
 **websiteUrl** | **string** |  | [optional]
-**billingAddress** | [**\Tripartie\Tpdk\Model\OrganizationWriteBillingAddress**](OrganizationWriteBillingAddress.md) |  | [optional]
+**billingAddress** | [**\Tripartie\Tpdk\Model\AddressWrite**](AddressWrite.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

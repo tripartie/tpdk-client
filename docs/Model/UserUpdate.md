@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **lastName** | **string** |  | [optional]
 **publicName** | **string** |  | [optional]
 **roleInCompany** | **string** |  | [optional]
-**birthday** | **\DateTime** |  |
+**birthday** | **\DateTime** |  | [optional]
 **intlPhoneNumber** | **string** |  | [optional]
 **consentMailNotification** | **bool** |  |
 **consentMailAds** | **bool** |  |

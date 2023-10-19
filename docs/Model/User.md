@@ -10,10 +10,11 @@ Name | Type | Description | Notes
 **lastName** | **string** |  | [optional]
 **publicName** | **string** |  | [optional]
 **roleInCompany** | **string** |  | [optional]
-**birthday** | **\DateTime** |  |
+**birthday** | **\DateTime** |  | [optional]
 **email** | **string** |  | [optional]
+**invitedRole** | **string[]** |  | [optional]
 **roles** | **string[]** |  |
-**password** | **string** | The hashed password |
+**password** | **string** | The hashed password | [optional]
 **plainPassword** | **string** |  | [optional]
 **intlPhoneNumber** | **string** |  | [optional]
 **originCountry** | **string** | The originating country | [optional]
