@@ -14,7 +14,10 @@ Name | Type | Description | Notes
 **chosenPartialRefundAmount** | **int** |  | [optional]
 **counterSolution** | **string** |  | [optional]
 **counterPartialRefundAmount** | **int** |  | [optional]
+**sellerNotes** | **string** |  | [optional]
+**sellerRejectionReason** | **string** |  | [optional]
 **complainantApproval** | **bool** |  | [optional]
 **sellerApproval** | **bool** |  | [optional]
+**platformReasoning** | **string** | Explicit additional information about the platform decision. Could be written by AI, Ruling or Customer Care. | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

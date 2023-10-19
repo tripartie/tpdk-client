@@ -21,7 +21,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | [**apiTransactionsUliddisputeGet()**](SafeCheckoutApi.md#apiTransactionsUliddisputeGet) | **GET** /transactions/{ulid}/dispute | Read Dispute from existing Transaction |
 | [**apiTransactionsUliddisputePatch()**](SafeCheckoutApi.md#apiTransactionsUliddisputePatch) | **PATCH** /transactions/{ulid}/dispute | Interact with a Dispute |
 | [**apiTransactionsUliddisputePost()**](SafeCheckoutApi.md#apiTransactionsUliddisputePost) | **POST** /transactions/{ulid}/dispute | Open a Dispute related to existing Transaction |
-| [**apiTransactionsUlidparcelsGet()**](SafeCheckoutApi.md#apiTransactionsUlidparcelsGet) | **GET** /transactions/{ulid}/parcels | Read single parcel state |
+| [**apiTransactionsUlidparcelsGetCollection()**](SafeCheckoutApi.md#apiTransactionsUlidparcelsGetCollection) | **GET** /transactions/{ulid}/parcels | Read shipments from Transaction |
 | [**apiTransactionsUlidparcelsIdDelete()**](SafeCheckoutApi.md#apiTransactionsUlidparcelsIdDelete) | **DELETE** /transactions/{ulid}/parcels/{id} | Withdraw shipment from Transaction |
 | [**apiTransactionsUlidparcelsPost()**](SafeCheckoutApi.md#apiTransactionsUlidparcelsPost) | **POST** /transactions/{ulid}/parcels | Manually declare package shipped for Transaction |
 
@@ -1272,15 +1272,15 @@ try {
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `apiTransactionsUlidparcelsGet()`
+## `apiTransactionsUlidparcelsGetCollection()`
 
 ```php
-apiTransactionsUlidparcelsGet($ulid): \Tripartie\Tpdk\Model\ParcelRead
+apiTransactionsUlidparcelsGetCollection($ulid, $page): object[]
 ```
 
-Read single parcel state
+Read shipments from Transaction
 
-Retrieves a Parcel resource.
+Retrieves the collection of Parcel resources.
 
 ### Example
 
@@ -1299,9 +1299,6 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
 
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
 
 $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
@@ -1309,13 +1306,14 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Transaction identifier
+$ulid = 'ulid_example'; // string | 
+$page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->apiTransactionsUlidparcelsGet($ulid);
+    $result = $apiInstance->apiTransactionsUlidparcelsGetCollection($ulid, $page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling SafeCheckoutApi->apiTransactionsUlidparcelsGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling SafeCheckoutApi->apiTransactionsUlidparcelsGetCollection: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1323,15 +1321,16 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Transaction identifier | |
+| **ulid** | **string**|  | |
+| **page** | **int**| The collection page number | [optional] [default to 1] |
 
 ### Return type
 
-[**\Tripartie\Tpdk\Model\ParcelRead**](../Model/ParcelRead.md)
+**object[]**
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey)
 
 ### HTTP request headers
 
@@ -1371,8 +1370,8 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Transaction identifier
-$id = 'id_example'; // string | Parcel identifier
+$ulid = 'ulid_example'; // string | 
+$id = 56; // int | 
 
 try {
     $apiInstance->apiTransactionsUlidparcelsIdDelete($ulid, $id);
@@ -1385,8 +1384,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Transaction identifier | |
-| **id** | **string**| Parcel identifier | |
+| **ulid** | **string**|  | |
+| **id** | **int**|  | |
 
 ### Return type
 
@@ -1427,11 +1426,6 @@ $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Au
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
 // $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
-
 // Configure OAuth2 access token for authorization: oauth
 $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
 
@@ -1442,7 +1436,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Transaction identifier
+$ulid = 'ulid_example'; // string | 
 $parcelWrite = new \Tripartie\Tpdk\Model\ParcelWrite(); // \Tripartie\Tpdk\Model\ParcelWrite | The new Parcel resource
 
 try {
@@ -1457,7 +1451,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Transaction identifier | |
+| **ulid** | **string**|  | |
 | **parcelWrite** | [**\Tripartie\Tpdk\Model\ParcelWrite**](../Model/ParcelWrite.md)| The new Parcel resource | |
 
 ### Return type
@@ -1466,7 +1460,7 @@ try {
 
 ### Authorization
 
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [oauth](../../README.md#oauth)
 
 ### HTTP request headers
 

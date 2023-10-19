@@ -13,9 +13,9 @@ Name | Type | Description | Notes
 **roles** | **string[]** |  |
 **intlPhoneNumber** | **string** |  | [optional]
 **lastSuccessfulLogIn** | **\DateTime** |  | [optional]
-**avatar** | [**\Tripartie\Tpdk\Model\OrganizationCollectionReadIcon**](OrganizationCollectionReadIcon.md) |  | [optional]
+**avatar** | [**\Tripartie\Tpdk\Model\MediaCollectionRead**](MediaCollectionRead.md) |  | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
-**organization** | [**\Tripartie\Tpdk\Model\UserCollectionReadOrganization**](UserCollectionReadOrganization.md) |  | [optional]
+**organization** | [**\Tripartie\Tpdk\Model\OrganizationCollectionRead**](OrganizationCollectionRead.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

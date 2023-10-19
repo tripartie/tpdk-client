@@ -16,7 +16,6 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | [**apiDisputesUlidevidencesPost()**](ResolutionCenterApi.md#apiDisputesUlidevidencesPost) | **POST** /disputes/{ulid}/evidences | Submit an Evidence to the Dispute case |
 | [**apiDisputesUlidparcelsGetCollection()**](ResolutionCenterApi.md#apiDisputesUlidparcelsGetCollection) | **GET** /disputes/{ulid}/parcels | Retrieves the collection of Parcel resources. |
 | [**apiDisputesUlidparcelsIdDelete()**](ResolutionCenterApi.md#apiDisputesUlidparcelsIdDelete) | **DELETE** /disputes/{ulid}/parcels/{id} | Removes the Parcel resource. |
-| [**apiDisputesUlidparcelsIdGet()**](ResolutionCenterApi.md#apiDisputesUlidparcelsIdGet) | **GET** /disputes/{ulid}/parcels/{id} | Read single parcel state |
 | [**apiDisputesUlidparcelsPost()**](ResolutionCenterApi.md#apiDisputesUlidparcelsPost) | **POST** /disputes/{ulid}/parcels | Creates a Parcel resource. |
 | [**apiOffersUlidmediasPost()**](ResolutionCenterApi.md#apiOffersUlidmediasPost) | **POST** /offers/{ulid}/medias | Upload a picture for a given Offer |
 
@@ -757,7 +756,7 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
+$ulid = 'ulid_example'; // string | 
 $page = 1; // int | The collection page number
 
 try {
@@ -772,7 +771,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
+| **ulid** | **string**|  | |
 | **page** | **int**| The collection page number | [optional] [default to 1] |
 
 ### Return type
@@ -855,78 +854,6 @@ void (empty response body)
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `apiDisputesUlidparcelsIdGet()`
-
-```php
-apiDisputesUlidparcelsIdGet($ulid, $id): \Tripartie\Tpdk\Model\ParcelRead
-```
-
-Read single parcel state
-
-Retrieves a Parcel resource.
-
-### Example
-
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-
-
-// Configure API key authorization: jwtPersonalKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
-
-// Configure API key authorization: personaAuthKey
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
-
-// Configure OAuth2 access token for authorization: oauth
-$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
-
-
-$apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$ulid = 'ulid_example'; // string | 
-$id = 56; // int | 
-
-try {
-    $result = $apiInstance->apiDisputesUlidparcelsIdGet($ulid, $id);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ResolutionCenterApi->apiDisputesUlidparcelsIdGet: ', $e->getMessage(), PHP_EOL;
-}
-```
-
-### Parameters
-
-| Name | Type | Description  | Notes |
-| ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**|  | |
-| **id** | **int**|  | |
-
-### Return type
-
-[**\Tripartie\Tpdk\Model\ParcelRead**](../Model/ParcelRead.md)
-
-### Authorization
-
-[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
-- **Accept**: `application/json`
-
-[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
-[[Back to Model list]](../../README.md#models)
-[[Back to README]](../../README.md)
-
 ## `apiDisputesUlidparcelsPost()`
 
 ```php
@@ -964,7 +891,7 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
+$ulid = 'ulid_example'; // string | 
 $parcelWrite = new \Tripartie\Tpdk\Model\ParcelWrite(); // \Tripartie\Tpdk\Model\ParcelWrite | The new Parcel resource
 
 try {
@@ -979,7 +906,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
+| **ulid** | **string**|  | |
 | **parcelWrite** | [**\Tripartie\Tpdk\Model\ParcelWrite**](../Model/ParcelWrite.md)| The new Parcel resource | |
 
 ### Return type
