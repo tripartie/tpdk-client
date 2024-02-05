@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ulid** | **string** |  |
 **publicUrl** | **string** | If specified, there would be not need for you to fill-in details. Must be accessible over WAN. | [optional]
-**seller** | [**\Tripartie\Tpdk\Model\PersonaCollectionRead**](PersonaCollectionRead.md) |  |
+**seller** | [**\Tripartie\Tpdk\Model\PersonaCollectionRead**](PersonaCollectionRead.md) | If the seller is actually YOUR organization, set it to NULL. |
 **title** | **string** |  | [optional]
 **unitPrice** | **float** |  | [optional]
 **currencyCode** | **string** |  | [optional] [default to 'EUR']

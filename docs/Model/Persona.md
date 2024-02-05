@@ -26,13 +26,13 @@ Name | Type | Description | Notes
 **externalSellCount** | **int** | Knowing the statistics on your user is used to better know its profile when you do not use the Safe-Checkout feature. Although it is not required, we recommend that you keep us informed. | [optional]
 **metadata** | [**\Tripartie\Tpdk\Model\Metadata[]**](Metadata.md) | You can assign different meta to your Persona object for different purposes. eg. Ease searching. | [optional]
 **offers** | **string[]** |  |
-**purchases** | **string[]** |  |
+**purchases** | **mixed** |  |
 **views** | [**\Tripartie\Tpdk\Model\View[]**](View.md) |  |
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
 **offerCount** | **int** | Issued Offers count owned by a given Persona | [optional] [readonly]
 **purchaseCount** | **int** |  | [optional] [readonly]
-**roles** | **string[]** |  | [optional] [readonly]
+**roles** | **string[]** |  | [optional]
 **userIdentifier** | **string** | Either email or the mobile phone number | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

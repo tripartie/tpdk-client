@@ -104,7 +104,7 @@ $apiInstance = new Tripartie\Tpdk\Api\BrandingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Media identifier
+$id = 56; // int | Organization identifier
 
 try {
     $apiInstance->apiOrganizationsIdiconDelete($id);
@@ -117,7 +117,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Media identifier | |
+| **id** | **int**| Organization identifier | |
 
 ### Return type
 
@@ -130,7 +130,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -165,7 +165,7 @@ $apiInstance = new Tripartie\Tpdk\Api\BrandingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Media identifier
+$id = 56; // int | Organization identifier
 $file = "/path/to/file.txt"; // \SplFileObject
 
 try {
@@ -180,7 +180,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Media identifier | |
+| **id** | **int**| Organization identifier | |
 | **file** | **\SplFileObject****\SplFileObject**|  | [optional] |
 
 ### Return type
@@ -229,7 +229,7 @@ $apiInstance = new Tripartie\Tpdk\Api\BrandingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Media identifier
+$id = 56; // int | Organization identifier
 
 try {
     $apiInstance->apiOrganizationsIdlogoDelete($id);
@@ -242,7 +242,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Media identifier | |
+| **id** | **int**| Organization identifier | |
 
 ### Return type
 
@@ -255,7 +255,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -290,7 +290,7 @@ $apiInstance = new Tripartie\Tpdk\Api\BrandingApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Media identifier
+$id = 56; // int | Organization identifier
 $file = "/path/to/file.txt"; // \SplFileObject
 
 try {
@@ -305,7 +305,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Media identifier | |
+| **id** | **int**| Organization identifier | |
 | **file** | **\SplFileObject****\SplFileObject**|  | [optional] |
 
 ### Return type

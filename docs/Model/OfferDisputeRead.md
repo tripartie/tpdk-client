@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **ulid** | **string** |  |
 **publicUrl** | **string** | If specified, there would be not need for you to fill-in details. Must be accessible over WAN. | [optional]
 **organization** | [**\Tripartie\Tpdk\Model\OrganizationDisputeRead**](OrganizationDisputeRead.md) |  | [optional]
-**seller** | **string** | If the seller is actually YOUR organization, set it to NULL. |
+**seller** | [**\Tripartie\Tpdk\Model\PersonaDisputeRead**](PersonaDisputeRead.md) | If the seller is actually YOUR organization, set it to NULL. |
 **nature** | **string** | This WILL affect the assigned workflow. Choosing service will disable delivery for example. Refer to our technical hub for more information. | [default to 'physical_item']
 **title** | **string** |  | [optional]
 **description** | **string** |  | [optional]

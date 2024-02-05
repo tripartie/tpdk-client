@@ -15,7 +15,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 ## `apiWebhookHistoriesGetCollection()`
 
 ```php
-apiWebhookHistoriesGetCollection($page, $event, $event2, $objectId): \Tripartie\Tpdk\Model\WebhookHistoryCollectionRead[]
+apiWebhookHistoriesGetCollection($page, $event, $event2, $objectId, $objectId2): \Tripartie\Tpdk\Model\WebhookHistoryCollectionRead[]
 ```
 
 Retrieves the collection of WebhookHistory resources.
@@ -48,9 +48,10 @@ $page = 1; // int | The collection page number
 $event = 'event_example'; // string | 
 $event2 = array('event_example'); // string[] | 
 $objectId = 'objectId_example'; // string | 
+$objectId2 = array('objectId_example'); // string[] | 
 
 try {
-    $result = $apiInstance->apiWebhookHistoriesGetCollection($page, $event, $event2, $objectId);
+    $result = $apiInstance->apiWebhookHistoriesGetCollection($page, $event, $event2, $objectId, $objectId2);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling WebhookApi->apiWebhookHistoriesGetCollection: ', $e->getMessage(), PHP_EOL;
@@ -65,6 +66,7 @@ try {
 | **event** | **string**|  | [optional] |
 | **event2** | [**string[]**](../Model/string.md)|  | [optional] |
 | **objectId** | **string**|  | [optional] |
+| **objectId2** | [**string[]**](../Model/string.md)|  | [optional] |
 
 ### Return type
 
@@ -334,7 +336,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

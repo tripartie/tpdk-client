@@ -4,7 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**id** | **string** |  | [optional] [readonly]
+**id** | **int** |  | [optional] [readonly]
 **firstName** | **string** |  | [optional]
 **lastName** | **string** |  | [optional]
 **publicName** | **string** |  | [optional]
@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **birthday** | **\DateTime** |  | [optional]
 **email** | **string** |  | [optional]
 **roles** | **string[]** |  |
+**totpEnabled** | **bool** |  | [optional]
 **intlPhoneNumber** | **string** |  | [optional]
 **originCountry** | **string** | The originating country | [optional]
 **preferredLanguage** | **string** |  | [optional]
@@ -22,5 +23,8 @@ Name | Type | Description | Notes
 **consentMailNotification** | **bool** |  |
 **consentMailAds** | **bool** |  |
 **organization** | [**\Tripartie\Tpdk\Model\OrganizationAuthenticatedRead**](OrganizationAuthenticatedRead.md) |  | [optional]
+**iri** | **string** |  | [optional] [readonly]
+**impersonatingOrganization** | **bool** |  | [optional] [readonly]
+**_2fa** | **bool** |  | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

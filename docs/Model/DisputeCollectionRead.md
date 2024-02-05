@@ -25,5 +25,6 @@ Name | Type | Description | Notes
 **awaitedParty** | **string** | Determine who is awaited (actor) for the next transition | [optional] [readonly]
 **iri** | **string** |  | [optional] [readonly]
 **messageCount** | **int** |  | [optional] [readonly]
+**closedInFavorOf** | **string** | Determine who won the case, if not specified, then it is ongoing. | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

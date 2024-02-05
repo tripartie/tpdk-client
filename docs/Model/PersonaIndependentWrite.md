@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**firstName** | **string** |  | [optional]
-**lastName** | **string** |  | [optional]
-**gender** | **string** |  | [optional] [default to 'RATHER_NOT_SAY']
+**firstName** | **string** |  |
+**lastName** | **string** |  |
+**gender** | **string** |  | [default to 'RATHER_NOT_SAY']
 **dateOfBirth** | **\DateTime** |  | [optional]
 **language** | **string** | That data is used for rendering the frontend application with given language. If not set, will be inferred. Custom codes can be issued for specific requirements. | [optional]
 **email** | **string** |  | [optional]
