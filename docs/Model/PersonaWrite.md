@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **language** | **string** | That data is used for rendering the frontend application with given language. If not set, will be inferred. Custom codes can be issued for specific requirements. | [optional]
 **email** | **string** |  | [optional]
 **mobilePhoneNumber** | **string** |  | [optional]
-**address** | [**\Tripartie\Tpdk\Model\AddressWrite**](AddressWrite.md) |  | [optional]
+**address** | [**\Tripartie\Tpdk\Model\PersonaWriteAddress**](PersonaWriteAddress.md) |  | [optional]
 **externalPurchaseCount** | **int** | Knowing the statistics on your user is used to better know its profile when you do not use the Safe-Checkout feature. Although it is not required, we recommend that you keep us informed. | [optional]
 **externalSellCount** | **int** | Knowing the statistics on your user is used to better know its profile when you do not use the Safe-Checkout feature. Although it is not required, we recommend that you keep us informed. | [optional]
 **metadata** | [**\Tripartie\Tpdk\Model\MetadataWrite[]**](MetadataWrite.md) | You can assign different meta to your Persona object for different purposes. eg. Ease searching. | [optional]

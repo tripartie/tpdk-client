@@ -34,13 +34,18 @@ Name | Type | Description | Notes
 **platformReasoning** | **string** | Explicit additional information about the platform decision. Could be written by AI, Ruling or Customer Care. | [optional]
 **arbitrationBy** | **string** |  | [optional]
 **parcels** | [**\Tripartie\Tpdk\Model\ParcelRead[]**](ParcelRead.md) |  |
+**views** | [**\Tripartie\Tpdk\Model\ViewRead[]**](ViewRead.md) |  |
 **metadata** | [**\Tripartie\Tpdk\Model\MetadataRead[]**](MetadataRead.md) |  |
-**events** | [**\Tripartie\Tpdk\Model\WorkflowEventRead[]**](WorkflowEventRead.md) |  | [optional] [readonly]
+**events** | [**\Tripartie\Tpdk\Model\WorkflowEventRead[]**](WorkflowEventRead.md) |  | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
+**viewCount** | **int** |  | [optional] [readonly]
 **statusExpiration** | **\DateTime** | Yield if eligible the date-time at which the dispute state expire. | [optional] [readonly]
 **awaitedParty** | **string** | Determine who is awaited (actor) for the next transition | [optional] [readonly]
 **iri** | **string** |  | [optional] [readonly]
 **messageCount** | **int** |  | [optional] [readonly]
+**closedInFavorOf** | **string** | Determine who won the case, if not specified, then it is ongoing. | [optional] [readonly]
+**disbursedByBuyer** | **float** | Total amount disbursed by the buyer to acquire the item. | [optional] [readonly]
+**maxRefundableForBuyer** | **float** | How much the buyer can actually receive back in case of a full refund. | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

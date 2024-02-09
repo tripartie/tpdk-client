@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **carrier** | **string** |  |
 **identifier** | **string** |  |
 **price** | **float** |  | [optional]
+**refundable** | **bool** |  | [optional]
 **currency** | **string** |  | [optional] [default to 'EUR']
 **status** | **string** |  | [optional]
 **dispute** | **string** |  | [optional]

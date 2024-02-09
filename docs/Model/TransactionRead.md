@@ -6,8 +6,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ulid** | **string** |  |
 **offer** | [**\Tripartie\Tpdk\Model\OfferRead**](OfferRead.md) |  |
-**buyer** | **string** |  |
+**buyer** | [**\Tripartie\Tpdk\Model\PersonaRead**](PersonaRead.md) |  |
 **fees** | **float** |  | [optional]
+**refundableFees** | **bool** |  | [optional]
 **metadata** | [**\Tripartie\Tpdk\Model\MetadataRead[]**](MetadataRead.md) |  | [optional]
 **parcels** | [**\Tripartie\Tpdk\Model\ParcelRead[]**](ParcelRead.md) |  | [optional]
 

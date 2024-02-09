@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **int** |  | [optional] [readonly]
 **status** | **string** |  | [default to 'SUBMITTED']
-**media** | [**\Tripartie\Tpdk\Model\MediaRead**](MediaRead.md) |  | [optional]
+**media** | [**\Tripartie\Tpdk\Model\EvidenceReadMedia**](EvidenceReadMedia.md) |  | [optional]
 **additionalInformation** | **string** | Description of what the evidence actually is. | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]

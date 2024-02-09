@@ -23,7 +23,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 ## `apiDisputesGetCollection()`
 
 ```php
-apiDisputesGetCollection($page, $orderCreatedAt, $orderStatus, $orderUpdatedAt, $transactionOfferTitle, $createdAtBefore, $createdAtStrictlyBefore, $createdAtAfter, $createdAtStrictlyAfter, $status, $transactionStatus, $existsRecommendedSolution, $existsChosenSolution, $existsCounterSolution, $existsPlatformSolution, $metadata, $transactionMetadata, $transactionOfferMetadata): \Tripartie\Tpdk\Model\DisputeCollectionRead[]
+apiDisputesGetCollection($page, $orderCreatedAt, $orderStatus, $orderUpdatedAt, $transactionOfferPublicUrl, $transactionOfferPublicUrl2, $transactionOfferTitle, $transactionBuyerId, $transactionBuyerId2, $transactionBuyerEmail, $transactionOfferSellerId, $transactionOfferSellerId2, $transactionOfferSellerEmail, $createdAtBefore, $createdAtStrictlyBefore, $createdAtAfter, $createdAtStrictlyAfter, $status, $transactionStatus, $existsRecommendedSolution, $existsChosenSolution, $existsCounterSolution, $existsPlatformSolution, $metadata, $transactionMetadata, $transactionOfferMetadata): \Tripartie\Tpdk\Model\DisputeCollectionRead[]
 ```
 
 Retrieves the collection of Dispute resources.
@@ -56,7 +56,15 @@ $page = 1; // int | The collection page number
 $orderCreatedAt = 'orderCreatedAt_example'; // string | 
 $orderStatus = 'orderStatus_example'; // string | 
 $orderUpdatedAt = 'orderUpdatedAt_example'; // string | 
+$transactionOfferPublicUrl = 'transactionOfferPublicUrl_example'; // string | 
+$transactionOfferPublicUrl2 = array('transactionOfferPublicUrl_example'); // string[] | 
 $transactionOfferTitle = 'transactionOfferTitle_example'; // string | 
+$transactionBuyerId = 56; // int | 
+$transactionBuyerId2 = array(56); // int[] | 
+$transactionBuyerEmail = 'transactionBuyerEmail_example'; // string | 
+$transactionOfferSellerId = 56; // int | 
+$transactionOfferSellerId2 = array(56); // int[] | 
+$transactionOfferSellerEmail = 'transactionOfferSellerEmail_example'; // string | 
 $createdAtBefore = 'createdAtBefore_example'; // string | 
 $createdAtStrictlyBefore = 'createdAtStrictlyBefore_example'; // string | 
 $createdAtAfter = 'createdAtAfter_example'; // string | 
@@ -72,7 +80,7 @@ $transactionMetadata = ["External-ID","1254A"]; // string[] | Flattened OrderedM
 $transactionOfferMetadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for transaction.offer.metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
 
 try {
-    $result = $apiInstance->apiDisputesGetCollection($page, $orderCreatedAt, $orderStatus, $orderUpdatedAt, $transactionOfferTitle, $createdAtBefore, $createdAtStrictlyBefore, $createdAtAfter, $createdAtStrictlyAfter, $status, $transactionStatus, $existsRecommendedSolution, $existsChosenSolution, $existsCounterSolution, $existsPlatformSolution, $metadata, $transactionMetadata, $transactionOfferMetadata);
+    $result = $apiInstance->apiDisputesGetCollection($page, $orderCreatedAt, $orderStatus, $orderUpdatedAt, $transactionOfferPublicUrl, $transactionOfferPublicUrl2, $transactionOfferTitle, $transactionBuyerId, $transactionBuyerId2, $transactionBuyerEmail, $transactionOfferSellerId, $transactionOfferSellerId2, $transactionOfferSellerEmail, $createdAtBefore, $createdAtStrictlyBefore, $createdAtAfter, $createdAtStrictlyAfter, $status, $transactionStatus, $existsRecommendedSolution, $existsChosenSolution, $existsCounterSolution, $existsPlatformSolution, $metadata, $transactionMetadata, $transactionOfferMetadata);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ResolutionCenterApi->apiDisputesGetCollection: ', $e->getMessage(), PHP_EOL;
@@ -87,7 +95,15 @@ try {
 | **orderCreatedAt** | **string**|  | [optional] |
 | **orderStatus** | **string**|  | [optional] |
 | **orderUpdatedAt** | **string**|  | [optional] |
+| **transactionOfferPublicUrl** | **string**|  | [optional] |
+| **transactionOfferPublicUrl2** | [**string[]**](../Model/string.md)|  | [optional] |
 | **transactionOfferTitle** | **string**|  | [optional] |
+| **transactionBuyerId** | **int**|  | [optional] |
+| **transactionBuyerId2** | [**int[]**](../Model/int.md)|  | [optional] |
+| **transactionBuyerEmail** | **string**|  | [optional] |
+| **transactionOfferSellerId** | **int**|  | [optional] |
+| **transactionOfferSellerId2** | [**int[]**](../Model/int.md)|  | [optional] |
+| **transactionOfferSellerEmail** | **string**|  | [optional] |
 | **createdAtBefore** | **string**|  | [optional] |
 | **createdAtStrictlyBefore** | **string**|  | [optional] |
 | **createdAtAfter** | **string**|  | [optional] |
@@ -242,7 +258,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -583,7 +599,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -848,7 +864,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)

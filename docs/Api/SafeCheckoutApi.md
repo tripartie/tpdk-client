@@ -75,7 +75,7 @@ $createdAtBefore = 'createdAtBefore_example'; // string |
 $createdAtStrictlyBefore = 'createdAtStrictlyBefore_example'; // string | 
 $createdAtAfter = 'createdAtAfter_example'; // string | 
 $createdAtStrictlyAfter = 'createdAtStrictlyAfter_example'; // string | 
-$metadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
+$metadata = [External-ID, 1254A]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
 $offerMetadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for offer.metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
 $nature = service; // string | Filter on a limited subset of nature
 $condition = NEW; // string | Filter on a limited subset of condition
@@ -328,7 +328,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -436,7 +436,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
 $ulid = 'ulid_example'; // string | Offer identifier
 $page = 1; // int | The collection page number
 $orderStatus = 'orderStatus_example'; // string | 
-$metadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
+$metadata = [External-ID, 1254A]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
 $status = CREATED; // string | Filter on a limited subset of status
 
 try {
@@ -667,7 +667,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -723,8 +723,8 @@ $createdAtBefore = 'createdAtBefore_example'; // string |
 $createdAtStrictlyBefore = 'createdAtStrictlyBefore_example'; // string | 
 $createdAtAfter = 'createdAtAfter_example'; // string | 
 $createdAtStrictlyAfter = 'createdAtStrictlyAfter_example'; // string | 
-$metadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
-$offerMetadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for offer.metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
+$metadata = [External-ID, 1254A]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
+$offerMetadata = [External-ID, 1254A]; // string[] | Flattened OrderedMap for offer.metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
 $nature = service; // string | Filter on a limited subset of nature
 $condition = NEW; // string | Filter on a limited subset of condition
 $shippingAllowed = True; // bool | 
@@ -955,7 +955,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
 );
 $page = 1; // int | The collection page number
 $orderStatus = 'orderStatus_example'; // string | 
-$metadata = ["External-ID","1254A"]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
+$metadata = [External-ID, 1254A]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
 $status = CREATED; // string | Filter on a limited subset of status
 
 try {
@@ -1055,7 +1055,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
@@ -1398,7 +1398,7 @@ void (empty response body)
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: Not defined
+- **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
 [[Back to Model list]](../../README.md#models)
