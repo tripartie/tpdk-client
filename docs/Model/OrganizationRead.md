@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **name** | **string** |  | [optional]
 **websiteUrl** | **string** |  | [optional]
 **customBaseUrl** | **string** |  | [optional]
-**icon** | [**\Tripartie\Tpdk\Model\MediaRead**](MediaRead.md) |  | [optional]
-**logo** | [**\Tripartie\Tpdk\Model\MediaRead**](MediaRead.md) |  | [optional]
+**icon** | [**\Tripartie\Tpdk\Model\EvidenceReadMedia**](EvidenceReadMedia.md) |  | [optional]
+**logo** | [**\Tripartie\Tpdk\Model\EvidenceReadMedia**](EvidenceReadMedia.md) |  | [optional]
 **primaryColor** | **string** |  | [optional]
 **secondaryColor** | **string** |  | [optional]
 **accentColor** | **string** |  | [optional]
@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **warningColor** | **string** |  | [optional]
 **directNotificationToggle** | **bool** |  | [default to true]
 **personaAuthPortalToggle** | **bool** |  |
+**counterProposalToggle** | **bool** |  | [default to true]
 **flatRateEnabled** | **bool** |  | [optional] [readonly]
 **rateCommissionSafeCheckout** | **float** |  |
 

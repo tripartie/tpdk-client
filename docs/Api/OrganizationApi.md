@@ -11,7 +11,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 ## `apiOrganizationsGetCollection()`
 
 ```php
-apiOrganizationsGetCollection($page): \Tripartie\Tpdk\Model\OrganizationCollectionRead[]
+apiOrganizationsGetCollection($page, $itemsPerPage, $name): \Tripartie\Tpdk\Model\OrganizationCollectionRead[]
 ```
 
 Retrieves the collection of Organization resources.
@@ -46,9 +46,11 @@ $apiInstance = new Tripartie\Tpdk\Api\OrganizationApi(
     $config
 );
 $page = 1; // int | The collection page number
+$itemsPerPage = 30; // int | The number of items per page
+$name = 'name_example'; // string | 
 
 try {
-    $result = $apiInstance->apiOrganizationsGetCollection($page);
+    $result = $apiInstance->apiOrganizationsGetCollection($page, $itemsPerPage, $name);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling OrganizationApi->apiOrganizationsGetCollection: ', $e->getMessage(), PHP_EOL;
@@ -60,6 +62,8 @@ try {
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
 | **page** | **int**| The collection page number | [optional] [default to 1] |
+| **itemsPerPage** | **int**| The number of items per page | [optional] [default to 30] |
+| **name** | **string**|  | [optional] |
 
 ### Return type
 

@@ -17,6 +17,6 @@ Name | Type | Description | Notes
 **preferredLanguage** | **string** |  |
 **consentMailNotification** | **bool** |  | [optional]
 **consentMailAds** | **bool** |  | [optional]
-**organization** | [**\Tripartie\Tpdk\Model\OrganizationWrite**](OrganizationWrite.md) |  | [optional]
+**organization** | [**\Tripartie\Tpdk\Model\UserWriteOrganization**](UserWriteOrganization.md) |  | [optional]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
