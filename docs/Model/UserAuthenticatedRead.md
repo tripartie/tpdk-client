@@ -17,13 +17,13 @@ Name | Type | Description | Notes
 **originCountry** | **string** | The originating country | [optional]
 **preferredLanguage** | **string** |  | [optional]
 **lastSuccessfulLogIn** | **\DateTime** |  | [optional]
-**avatar** | [**\Tripartie\Tpdk\Model\OrganizationAuthenticatedReadIcon**](OrganizationAuthenticatedReadIcon.md) |  | [optional]
+**avatar** | [**\Tripartie\Tpdk\Model\MediaAuthenticatedRead**](MediaAuthenticatedRead.md) |  | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
 **consentMailNotification** | **bool** |  |
 **consentMailAds** | **bool** |  |
 **lockdown** | **bool** |  |
-**organization** | [**\Tripartie\Tpdk\Model\UserAuthenticatedReadOrganization**](UserAuthenticatedReadOrganization.md) |  | [optional]
+**organization** | [**\Tripartie\Tpdk\Model\OrganizationAuthenticatedRead**](OrganizationAuthenticatedRead.md) |  | [optional]
 **iri** | **string** |  | [optional] [readonly]
 **impersonatingOrganization** | **bool** |  | [optional] [readonly]
 **_2fa** | **bool** |  | [optional] [readonly]

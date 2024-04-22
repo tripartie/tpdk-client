@@ -39,7 +39,7 @@ $apiInstance = new Tripartie\Tpdk\Api\NotificationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Persona identifier
+$id = 'id_example'; // string | Notification identifier
 $page = 1; // int | The collection page number
 
 try {
@@ -54,7 +54,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Persona identifier | |
+| **id** | **string**| Notification identifier | |
 | **page** | **int**| The collection page number | [optional] [default to 1] |
 
 ### Return type
@@ -103,7 +103,7 @@ $apiInstance = new Tripartie\Tpdk\Api\NotificationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$personaId = 'personaId_example'; // string | Persona identifier
+$personaId = 'personaId_example'; // string | Notification identifier
 $id = 'id_example'; // string | Notification identifier
 $notificationUpdate = new \Tripartie\Tpdk\Model\NotificationUpdate(); // \Tripartie\Tpdk\Model\NotificationUpdate | The updated Notification resource
 
@@ -119,7 +119,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **personaId** | **string**| Persona identifier | |
+| **personaId** | **string**| Notification identifier | |
 | **id** | **string**| Notification identifier | |
 | **notificationUpdate** | [**\Tripartie\Tpdk\Model\NotificationUpdate**](../Model/NotificationUpdate.md)| The updated Notification resource | |
 
@@ -177,7 +177,7 @@ $apiInstance = new Tripartie\Tpdk\Api\NotificationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | User identifier
+$id = 'id_example'; // string | Notification identifier
 $page = 1; // int | The collection page number
 
 try {
@@ -192,7 +192,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| User identifier | |
+| **id** | **string**| Notification identifier | |
 | **page** | **int**| The collection page number | [optional] [default to 1] |
 
 ### Return type
@@ -241,7 +241,7 @@ $apiInstance = new Tripartie\Tpdk\Api\NotificationApi(
     new GuzzleHttp\Client(),
     $config
 );
-$userId = 'userId_example'; // string | User identifier
+$userId = 'userId_example'; // string | Notification identifier
 $id = 'id_example'; // string | Notification identifier
 $notificationUpdate = new \Tripartie\Tpdk\Model\NotificationUpdate(); // \Tripartie\Tpdk\Model\NotificationUpdate | The updated Notification resource
 
@@ -257,7 +257,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **userId** | **string**| User identifier | |
+| **userId** | **string**| Notification identifier | |
 | **id** | **string**| Notification identifier | |
 | **notificationUpdate** | [**\Tripartie\Tpdk\Model\NotificationUpdate**](../Model/NotificationUpdate.md)| The updated Notification resource | |
 

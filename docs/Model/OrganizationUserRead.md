@@ -7,8 +7,8 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] [readonly]
 **name** | **string** |  | [optional]
 **domainVerified** | **bool** |  |
-**icon** | [**\Tripartie\Tpdk\Model\OrganizationUserReadIcon**](OrganizationUserReadIcon.md) |  | [optional]
-**logo** | [**\Tripartie\Tpdk\Model\OrganizationUserReadIcon**](OrganizationUserReadIcon.md) |  | [optional]
+**icon** | [**\Tripartie\Tpdk\Model\MediaUserRead**](MediaUserRead.md) |  | [optional]
+**logo** | [**\Tripartie\Tpdk\Model\MediaUserRead**](MediaUserRead.md) |  | [optional]
 **safeCheckoutToggle** | **bool** |  |
 **resolutionCenterToggle** | **bool** |  | [default to true]
 **internalMessagingToggle** | **bool** |  | [default to true]

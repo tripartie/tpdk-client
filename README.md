@@ -86,6 +86,7 @@ Class | Method | HTTP request | Description
 *BrandingApi* | [**apiOrganizationsIdiconPost**](docs/Api/BrandingApi.md#apiorganizationsidiconpost) | **POST** /organizations/{id}/icon | Upload your Organization Icon
 *BrandingApi* | [**apiOrganizationsIdlogoDelete**](docs/Api/BrandingApi.md#apiorganizationsidlogodelete) | **DELETE** /organizations/{id}/logo | Unset your Organization Logo
 *BrandingApi* | [**apiOrganizationsIdlogoPost**](docs/Api/BrandingApi.md#apiorganizationsidlogopost) | **POST** /organizations/{id}/logo | Upload your Organization logo
+*EvidenceApi* | [**apiEvidencesIdGet**](docs/Api/EvidenceApi.md#apievidencesidget) | **GET** /evidences/{id} | Retrieves a Evidence resource.
 *MediaApi* | [**apiMediasIdGet**](docs/Api/MediaApi.md#apimediasidget) | **GET** /medias/{id} | Retrieves a Media resource.
 *NotificationApi* | [**apiPersonasIdnotificationsGetCollection**](docs/Api/NotificationApi.md#apipersonasidnotificationsgetcollection) | **GET** /personas/{id}/notifications | Retrieve pending notifications for Persona
 *NotificationApi* | [**apiPersonasPersonaIdnotificationsIdPatch**](docs/Api/NotificationApi.md#apipersonaspersonaidnotificationsidpatch) | **PATCH** /personas/{personaId}/notifications/{id} | Mark as read/unread a notification for Persona
@@ -185,7 +186,6 @@ Class | Method | HTTP request | Description
 - [EvaluationWrite](docs/Model/EvaluationWrite.md)
 - [Evidence](docs/Model/Evidence.md)
 - [EvidenceRead](docs/Model/EvidenceRead.md)
-- [EvidenceReadMedia](docs/Model/EvidenceReadMedia.md)
 - [EvidenceWrite](docs/Model/EvidenceWrite.md)
 - [GenericError](docs/Model/GenericError.md)
 - [InvalidQueryError](docs/Model/InvalidQueryError.md)
@@ -208,47 +208,35 @@ Class | Method | HTTP request | Description
 - [Offer](docs/Model/Offer.md)
 - [OfferCollectionRead](docs/Model/OfferCollectionRead.md)
 - [OfferDisputeRead](docs/Model/OfferDisputeRead.md)
-- [OfferDisputeReadOrganization](docs/Model/OfferDisputeReadOrganization.md)
 - [OfferIndependentWrite](docs/Model/OfferIndependentWrite.md)
 - [OfferPostCreationRead](docs/Model/OfferPostCreationRead.md)
 - [OfferRead](docs/Model/OfferRead.md)
-- [OfferReadOrganization](docs/Model/OfferReadOrganization.md)
 - [OfferUpdate](docs/Model/OfferUpdate.md)
 - [OfferWrite](docs/Model/OfferWrite.md)
 - [OrganizationAuthenticatedRead](docs/Model/OrganizationAuthenticatedRead.md)
-- [OrganizationAuthenticatedReadIcon](docs/Model/OrganizationAuthenticatedReadIcon.md)
 - [OrganizationCollectionRead](docs/Model/OrganizationCollectionRead.md)
-- [OrganizationCollectionReadIcon](docs/Model/OrganizationCollectionReadIcon.md)
 - [OrganizationDisputeRead](docs/Model/OrganizationDisputeRead.md)
-- [OrganizationDisputeReadIcon](docs/Model/OrganizationDisputeReadIcon.md)
 - [OrganizationRead](docs/Model/OrganizationRead.md)
 - [OrganizationUpdate](docs/Model/OrganizationUpdate.md)
-- [OrganizationUpdateBillingAddress](docs/Model/OrganizationUpdateBillingAddress.md)
 - [OrganizationUserRead](docs/Model/OrganizationUserRead.md)
-- [OrganizationUserReadIcon](docs/Model/OrganizationUserReadIcon.md)
 - [OrganizationWrite](docs/Model/OrganizationWrite.md)
-- [OrganizationWriteBillingAddress](docs/Model/OrganizationWriteBillingAddress.md)
 - [Parcel](docs/Model/Parcel.md)
 - [ParcelDisputeRead](docs/Model/ParcelDisputeRead.md)
 - [ParcelIndependentWrite](docs/Model/ParcelIndependentWrite.md)
 - [ParcelRead](docs/Model/ParcelRead.md)
 - [ParcelWrite](docs/Model/ParcelWrite.md)
 - [Persona](docs/Model/Persona.md)
-- [PersonaAddress](docs/Model/PersonaAddress.md)
 - [PersonaAuthReturn](docs/Model/PersonaAuthReturn.md)
 - [PersonaCollectionRead](docs/Model/PersonaCollectionRead.md)
 - [PersonaDisputeRead](docs/Model/PersonaDisputeRead.md)
 - [PersonaExternalAuth](docs/Model/PersonaExternalAuth.md)
 - [PersonaIndependentWrite](docs/Model/PersonaIndependentWrite.md)
-- [PersonaIndependentWriteAddress](docs/Model/PersonaIndependentWriteAddress.md)
 - [PersonaPostAuthRead](docs/Model/PersonaPostAuthRead.md)
 - [PersonaRead](docs/Model/PersonaRead.md)
 - [PersonaRegister](docs/Model/PersonaRegister.md)
 - [PersonaTokenWrite](docs/Model/PersonaTokenWrite.md)
 - [PersonaUpdate](docs/Model/PersonaUpdate.md)
-- [PersonaUpdateAddress](docs/Model/PersonaUpdateAddress.md)
 - [PersonaWrite](docs/Model/PersonaWrite.md)
-- [PersonaWriteAddress](docs/Model/PersonaWriteAddress.md)
 - [RateLimitError](docs/Model/RateLimitError.md)
 - [TransactionCollectionRead](docs/Model/TransactionCollectionRead.md)
 - [TransactionDisputeRead](docs/Model/TransactionDisputeRead.md)
@@ -258,9 +246,7 @@ Class | Method | HTTP request | Description
 - [UnprocessableEntityViolationsInner](docs/Model/UnprocessableEntityViolationsInner.md)
 - [User](docs/Model/User.md)
 - [UserAuthenticatedRead](docs/Model/UserAuthenticatedRead.md)
-- [UserAuthenticatedReadOrganization](docs/Model/UserAuthenticatedReadOrganization.md)
 - [UserCollectionRead](docs/Model/UserCollectionRead.md)
-- [UserCollectionReadOrganization](docs/Model/UserCollectionReadOrganization.md)
 - [UserEmailValidationWrite](docs/Model/UserEmailValidationWrite.md)
 - [UserInvite](docs/Model/UserInvite.md)
 - [UserJwtCreated](docs/Model/UserJwtCreated.md)
@@ -272,10 +258,8 @@ Class | Method | HTTP request | Description
 - [UserUserEmailUpdate](docs/Model/UserUserEmailUpdate.md)
 - [UserUserPasswordUpdate](docs/Model/UserUserPasswordUpdate.md)
 - [UserUserRead](docs/Model/UserUserRead.md)
-- [UserUserReadOrganization](docs/Model/UserUserReadOrganization.md)
 - [UserUserSubscribed](docs/Model/UserUserSubscribed.md)
 - [UserWrite](docs/Model/UserWrite.md)
-- [UserWriteOrganization](docs/Model/UserWriteOrganization.md)
 - [View](docs/Model/View.md)
 - [ViewDisputeRead](docs/Model/ViewDisputeRead.md)
 - [ViewRead](docs/Model/ViewRead.md)
@@ -341,5 +325,6 @@ noc@tripartie.com
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2.0.178`
+- API version: `2.0.194`
+    - Generator version: `7.5.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

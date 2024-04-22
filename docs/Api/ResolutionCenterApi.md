@@ -435,7 +435,7 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
+$ulid = 'ulid_example'; // string | Evaluation identifier
 $evaluationWrite = new \Tripartie\Tpdk\Model\EvaluationWrite(); // \Tripartie\Tpdk\Model\EvaluationWrite | The new Evaluation resource
 
 try {
@@ -450,7 +450,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
+| **ulid** | **string**| Evaluation identifier | |
 | **evaluationWrite** | [**\Tripartie\Tpdk\Model\EvaluationWrite**](../Model/EvaluationWrite.md)| The new Evaluation resource | |
 
 ### Return type

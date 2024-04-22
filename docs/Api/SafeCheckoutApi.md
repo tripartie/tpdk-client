@@ -433,7 +433,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Offer identifier
+$ulid = 'ulid_example'; // string | Transaction identifier
 $page = 1; // int | The collection page number
 $orderStatus = 'orderStatus_example'; // string | 
 $metadata = [External-ID, 1254A]; // string[] | Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \"null\" for desired value.
@@ -451,7 +451,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Offer identifier | |
+| **ulid** | **string**| Transaction identifier | |
 | **page** | **int**| The collection page number | [optional] [default to 1] |
 | **orderStatus** | **string**|  | [optional] |
 | **metadata** | [**string[]**](../Model/string.md)| Flattened OrderedMap for metadata. Must be a multiple of two items count. Explicitly set \&quot;null\&quot; for desired value. | [optional] |
@@ -503,8 +503,8 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
-$id = 'id_example'; // string | Transaction identifier
+$ulid = 'ulid_example'; // string | Evaluation identifier
+$id = 'id_example'; // string | Evaluation identifier
 $evaluationWrite = new \Tripartie\Tpdk\Model\EvaluationWrite(); // \Tripartie\Tpdk\Model\EvaluationWrite | The new Evaluation resource
 
 try {
@@ -519,8 +519,8 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
-| **id** | **string**| Transaction identifier | |
+| **ulid** | **string**| Evaluation identifier | |
+| **id** | **string**| Evaluation identifier | |
 | **evaluationWrite** | [**\Tripartie\Tpdk\Model\EvaluationWrite**](../Model/EvaluationWrite.md)| The new Evaluation resource | |
 
 ### Return type
@@ -569,7 +569,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Offer identifier
+$ulid = 'ulid_example'; // string | Transaction identifier
 $body = array('key' => new \stdClass); // object | The new Transaction resource
 
 try {
@@ -584,7 +584,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Offer identifier | |
+| **ulid** | **string**| Transaction identifier | |
 | **body** | **object**| The new Transaction resource | |
 
 ### Return type
@@ -641,7 +641,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Persona identifier
+$id = 'id_example'; // string | Offer identifier
 
 try {
     $apiInstance->apiPersonasIdoffersDelete($id);
@@ -654,7 +654,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Persona identifier | |
+| **id** | **string**| Offer identifier | |
 
 ### Return type
 
@@ -710,7 +710,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Persona identifier
+$id = 'id_example'; // string | Offer identifier
 $page = 1; // int | The collection page number
 $title = 'title_example'; // string | 
 $publicUrl = 'publicUrl_example'; // string | 
@@ -741,7 +741,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Persona identifier | |
+| **id** | **string**| Offer identifier | |
 | **page** | **int**| The collection page number | [optional] [default to 1] |
 | **title** | **string**|  | [optional] |
 | **publicUrl** | **string**|  | [optional] |
@@ -814,7 +814,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Persona identifier
+$id = 'id_example'; // string | Offer identifier
 $offerUpdate = new \Tripartie\Tpdk\Model\OfferUpdate(); // \Tripartie\Tpdk\Model\OfferUpdate | The updated Offer resource
 
 try {
@@ -829,7 +829,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Persona identifier | |
+| **id** | **string**| Offer identifier | |
 | **offerUpdate** | [**\Tripartie\Tpdk\Model\OfferUpdate**](../Model/OfferUpdate.md)| The updated Offer resource | |
 
 ### Return type
@@ -886,7 +886,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$id = 'id_example'; // string | Persona identifier
+$id = 'id_example'; // string | Offer identifier
 $offerWrite = new \Tripartie\Tpdk\Model\OfferWrite(); // \Tripartie\Tpdk\Model\OfferWrite | The new Offer resource
 
 try {
@@ -901,7 +901,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **id** | **string**| Persona identifier | |
+| **id** | **string**| Offer identifier | |
 | **offerWrite** | [**\Tripartie\Tpdk\Model\OfferWrite**](../Model/OfferWrite.md)| The new Offer resource | |
 
 ### Return type
@@ -1029,7 +1029,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Transaction identifier
+$ulid = 'ulid_example'; // string | Dispute identifier
 
 try {
     $apiInstance->apiTransactionsUliddisputeDelete($ulid);
@@ -1042,7 +1042,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Transaction identifier | |
+| **ulid** | **string**| Dispute identifier | |
 
 ### Return type
 
@@ -1098,7 +1098,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Transaction identifier
+$ulid = 'ulid_example'; // string | Dispute identifier
 
 try {
     $result = $apiInstance->apiTransactionsUliddisputeGet($ulid);
@@ -1112,7 +1112,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Transaction identifier | |
+| **ulid** | **string**| Dispute identifier | |
 
 ### Return type
 
@@ -1165,7 +1165,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Transaction identifier
+$ulid = 'ulid_example'; // string | Dispute identifier
 $disputeUpdate = new \Tripartie\Tpdk\Model\DisputeUpdate(); // \Tripartie\Tpdk\Model\DisputeUpdate | The updated Dispute resource
 
 try {
@@ -1180,7 +1180,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Transaction identifier | |
+| **ulid** | **string**| Dispute identifier | |
 | **disputeUpdate** | [**\Tripartie\Tpdk\Model\DisputeUpdate**](../Model/DisputeUpdate.md)| The updated Dispute resource | |
 
 ### Return type
@@ -1237,7 +1237,7 @@ $apiInstance = new Tripartie\Tpdk\Api\SafeCheckoutApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Transaction identifier
+$ulid = 'ulid_example'; // string | Dispute identifier
 $disputeWrite = new \Tripartie\Tpdk\Model\DisputeWrite(); // \Tripartie\Tpdk\Model\DisputeWrite | The new Dispute resource
 
 try {
@@ -1252,7 +1252,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Transaction identifier | |
+| **ulid** | **string**| Dispute identifier | |
 | **disputeWrite** | [**\Tripartie\Tpdk\Model\DisputeWrite**](../Model/DisputeWrite.md)| The new Dispute resource | |
 
 ### Return type

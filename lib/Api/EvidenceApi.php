@@ -1,6 +1,6 @@
 <?php
 /**
- * MediaApi
+ * EvidenceApi
  * PHP version 7.4
  *
  * @category Class
@@ -41,14 +41,14 @@ use Tripartie\Tpdk\HeaderSelector;
 use Tripartie\Tpdk\ObjectSerializer;
 
 /**
- * MediaApi Class Doc Comment
+ * EvidenceApi Class Doc Comment
  *
  * @category Class
  * @package  Tripartie\Tpdk
  * @author   OpenAPI Generator team
  * @link     https://openapi-generator.tech
  */
-class MediaApi
+class EvidenceApi
 {
     /**
      * @var ClientInterface
@@ -72,7 +72,7 @@ class MediaApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'apiMediasIdGet' => [
+        'apiEvidencesIdGet' => [
             'application/json',
         ],
     ];
@@ -124,38 +124,38 @@ class MediaApi
     }
 
     /**
-     * Operation apiMediasIdGet
+     * Operation apiEvidencesIdGet
      *
-     * Retrieves a Media resource.
+     * Retrieves a Evidence resource.
      *
-     * @param  string $id Media identifier (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiMediasIdGet'] to see the possible values for this operation
+     * @param  string $id Evidence identifier (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiEvidencesIdGet'] to see the possible values for this operation
      *
      * @throws \Tripartie\Tpdk\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \Tripartie\Tpdk\Model\Media|\Tripartie\Tpdk\Model\NotFoundError|\Tripartie\Tpdk\Model\RateLimitError|\Tripartie\Tpdk\Model\GenericError
+     * @return \Tripartie\Tpdk\Model\Evidence|\Tripartie\Tpdk\Model\NotFoundError|\Tripartie\Tpdk\Model\RateLimitError|\Tripartie\Tpdk\Model\GenericError
      */
-    public function apiMediasIdGet($id, string $contentType = self::contentTypes['apiMediasIdGet'][0])
+    public function apiEvidencesIdGet($id, string $contentType = self::contentTypes['apiEvidencesIdGet'][0])
     {
-        list($response) = $this->apiMediasIdGetWithHttpInfo($id, $contentType);
+        list($response) = $this->apiEvidencesIdGetWithHttpInfo($id, $contentType);
         return $response;
     }
 
     /**
-     * Operation apiMediasIdGetWithHttpInfo
+     * Operation apiEvidencesIdGetWithHttpInfo
      *
-     * Retrieves a Media resource.
+     * Retrieves a Evidence resource.
      *
-     * @param  string $id Media identifier (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiMediasIdGet'] to see the possible values for this operation
+     * @param  string $id Evidence identifier (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiEvidencesIdGet'] to see the possible values for this operation
      *
      * @throws \Tripartie\Tpdk\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \Tripartie\Tpdk\Model\Media|\Tripartie\Tpdk\Model\NotFoundError|\Tripartie\Tpdk\Model\RateLimitError|\Tripartie\Tpdk\Model\GenericError, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Tripartie\Tpdk\Model\Evidence|\Tripartie\Tpdk\Model\NotFoundError|\Tripartie\Tpdk\Model\RateLimitError|\Tripartie\Tpdk\Model\GenericError, HTTP status code, HTTP response headers (array of strings)
      */
-    public function apiMediasIdGetWithHttpInfo($id, string $contentType = self::contentTypes['apiMediasIdGet'][0])
+    public function apiEvidencesIdGetWithHttpInfo($id, string $contentType = self::contentTypes['apiEvidencesIdGet'][0])
     {
-        $request = $this->apiMediasIdGetRequest($id, $contentType);
+        $request = $this->apiEvidencesIdGetRequest($id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -194,11 +194,11 @@ class MediaApi
 
             switch($statusCode) {
                 case 200:
-                    if ('\Tripartie\Tpdk\Model\Media' === '\SplFileObject') {
+                    if ('\Tripartie\Tpdk\Model\Evidence' === '\SplFileObject') {
                         $content = $response->getBody(); //stream goes to serializer
                     } else {
                         $content = (string) $response->getBody();
-                        if ('\Tripartie\Tpdk\Model\Media' !== 'string') {
+                        if ('\Tripartie\Tpdk\Model\Evidence' !== 'string') {
                             try {
                                 $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
                             } catch (\JsonException $exception) {
@@ -216,7 +216,7 @@ class MediaApi
                     }
 
                     return [
-                        ObjectSerializer::deserialize($content, '\Tripartie\Tpdk\Model\Media', []),
+                        ObjectSerializer::deserialize($content, '\Tripartie\Tpdk\Model\Evidence', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -303,7 +303,7 @@ class MediaApi
                     ];
             }
 
-            $returnType = '\Tripartie\Tpdk\Model\Media';
+            $returnType = '\Tripartie\Tpdk\Model\Evidence';
             if ($returnType === '\SplFileObject') {
                 $content = $response->getBody(); //stream goes to serializer
             } else {
@@ -336,7 +336,7 @@ class MediaApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Tripartie\Tpdk\Model\Media',
+                        '\Tripartie\Tpdk\Model\Evidence',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -371,19 +371,19 @@ class MediaApi
     }
 
     /**
-     * Operation apiMediasIdGetAsync
+     * Operation apiEvidencesIdGetAsync
      *
-     * Retrieves a Media resource.
+     * Retrieves a Evidence resource.
      *
-     * @param  string $id Media identifier (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiMediasIdGet'] to see the possible values for this operation
+     * @param  string $id Evidence identifier (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiEvidencesIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiMediasIdGetAsync($id, string $contentType = self::contentTypes['apiMediasIdGet'][0])
+    public function apiEvidencesIdGetAsync($id, string $contentType = self::contentTypes['apiEvidencesIdGet'][0])
     {
-        return $this->apiMediasIdGetAsyncWithHttpInfo($id, $contentType)
+        return $this->apiEvidencesIdGetAsyncWithHttpInfo($id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -392,20 +392,20 @@ class MediaApi
     }
 
     /**
-     * Operation apiMediasIdGetAsyncWithHttpInfo
+     * Operation apiEvidencesIdGetAsyncWithHttpInfo
      *
-     * Retrieves a Media resource.
+     * Retrieves a Evidence resource.
      *
-     * @param  string $id Media identifier (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiMediasIdGet'] to see the possible values for this operation
+     * @param  string $id Evidence identifier (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiEvidencesIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function apiMediasIdGetAsyncWithHttpInfo($id, string $contentType = self::contentTypes['apiMediasIdGet'][0])
+    public function apiEvidencesIdGetAsyncWithHttpInfo($id, string $contentType = self::contentTypes['apiEvidencesIdGet'][0])
     {
-        $returnType = '\Tripartie\Tpdk\Model\Media';
-        $request = $this->apiMediasIdGetRequest($id, $contentType);
+        $returnType = '\Tripartie\Tpdk\Model\Evidence';
+        $request = $this->apiEvidencesIdGetRequest($id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -444,26 +444,26 @@ class MediaApi
     }
 
     /**
-     * Create request for operation 'apiMediasIdGet'
+     * Create request for operation 'apiEvidencesIdGet'
      *
-     * @param  string $id Media identifier (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiMediasIdGet'] to see the possible values for this operation
+     * @param  string $id Evidence identifier (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['apiEvidencesIdGet'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function apiMediasIdGetRequest($id, string $contentType = self::contentTypes['apiMediasIdGet'][0])
+    public function apiEvidencesIdGetRequest($id, string $contentType = self::contentTypes['apiEvidencesIdGet'][0])
     {
 
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling apiMediasIdGet'
+                'Missing the required parameter $id when calling apiEvidencesIdGet'
             );
         }
 
 
-        $resourcePath = '/medias/{id}';
+        $resourcePath = '/evidences/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

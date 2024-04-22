@@ -8,8 +8,8 @@ Name | Type | Description | Notes
 **enforcePersonaAuth** | **bool** | Mean that the generated url cannot be accessed without a generated token for a Persona. Disallow external registration. | [optional] [default to true]
 **overrideRateCommissionSafeCheckout** | **float** | Override YOUR platform fees for that particular Offer. | [optional]
 **redirectUrl** | **string** | Fill-in that field IF you intend to redirect your customer instead of using a WebView. | [optional]
-**title** | **string** |  |
-**description** | **string** |  |
+**title** | **string** |  | [optional]
+**description** | **string** |  | [optional]
 **unitPrice** | **float** |  | [optional]
 **currencyCode** | **string** |  | [optional] [default to 'EUR']
 **itemCount** | **int** |  | [optional] [default to 1]
