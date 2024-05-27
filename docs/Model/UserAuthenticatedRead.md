@@ -17,15 +17,15 @@ Name | Type | Description | Notes
 **originCountry** | **string** | The originating country | [optional]
 **preferredLanguage** | **string** |  | [optional]
 **lastSuccessfulLogIn** | **\DateTime** |  | [optional]
-**avatar** | [**\Tripartie\Tpdk\Model\OrganizationAuthenticatedReadIcon**](OrganizationAuthenticatedReadIcon.md) |  | [optional]
+**avatar** | [**\Tripartie\Tpdk\Model\UserMediaAuthenticatedRead**](UserMediaAuthenticatedRead.md) |  | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
 **consentMailNotification** | **bool** |  |
 **consentMailAds** | **bool** |  |
 **lockdown** | **bool** |  |
-**organization** | [**\Tripartie\Tpdk\Model\UserAuthenticatedReadOrganization**](UserAuthenticatedReadOrganization.md) |  | [optional]
+**organization** | [**\Tripartie\Tpdk\Model\UserOrganizationAuthenticatedRead**](UserOrganizationAuthenticatedRead.md) |  | [optional]
 **iri** | **string** |  | [optional] [readonly]
 **impersonatingOrganization** | **bool** |  | [optional] [readonly]
-**_2fa** | **bool** |  | [optional] [readonly]
+**secondAuthFactor** | **bool** |  | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

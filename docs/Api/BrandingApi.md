@@ -14,7 +14,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 ## `apiOrganizationsIdPatch()`
 
 ```php
-apiOrganizationsIdPatch($id, $organizationUpdate): \Tripartie\Tpdk\Model\OrganizationRead
+apiOrganizationsIdPatch($id, $organizationUpdate): \Tripartie\Tpdk\Model\UserOrganizationRead
 ```
 
 Update your Organization details, branding or parameters
@@ -60,7 +60,7 @@ try {
 
 ### Return type
 
-[**\Tripartie\Tpdk\Model\OrganizationRead**](../Model/OrganizationRead.md)
+[**\Tripartie\Tpdk\Model\UserOrganizationRead**](../Model/UserOrganizationRead.md)
 
 ### Authorization
 

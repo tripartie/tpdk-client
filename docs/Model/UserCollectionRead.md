@@ -14,11 +14,11 @@ Name | Type | Description | Notes
 **totpEnabled** | **bool** |  | [optional]
 **intlPhoneNumber** | **string** |  | [optional]
 **lastSuccessfulLogIn** | **\DateTime** |  | [optional]
-**avatar** | [**\Tripartie\Tpdk\Model\OrganizationCollectionReadIcon**](OrganizationCollectionReadIcon.md) |  | [optional]
+**avatar** | [**\Tripartie\Tpdk\Model\UserMediaCollectionRead**](UserMediaCollectionRead.md) |  | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
-**organization** | [**\Tripartie\Tpdk\Model\UserCollectionReadOrganization**](UserCollectionReadOrganization.md) |  | [optional]
+**organization** | [**\Tripartie\Tpdk\Model\UserOrganizationCollectionRead**](UserOrganizationCollectionRead.md) |  | [optional]
 **iri** | **string** |  | [optional] [readonly]
-**_2fa** | **bool** |  | [optional] [readonly]
+**secondAuthFactor** | **bool** |  | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
