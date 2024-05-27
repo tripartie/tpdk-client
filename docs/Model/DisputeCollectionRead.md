@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ulid** | **string** |  |
-**transaction** | [**\Tripartie\Tpdk\Model\TransactionCollectionRead**](TransactionCollectionRead.md) |  | [optional]
+**transaction** | [**\Tripartie\Tpdk\Model\DisputeTransactionCollectionRead**](DisputeTransactionCollectionRead.md) |  | [optional]
 **status** | **string** |  | [default to 'CREATED']
 **itemCount** | **int** | The dispute may concern only PART of the package. Specify it there. | [optional]
 **issueType** | **string** |  | [optional]

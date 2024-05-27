@@ -86,7 +86,6 @@ Class | Method | HTTP request | Description
 *BrandingApi* | [**apiOrganizationsIdiconPost**](docs/Api/BrandingApi.md#apiorganizationsidiconpost) | **POST** /organizations/{id}/icon | Upload your Organization Icon
 *BrandingApi* | [**apiOrganizationsIdlogoDelete**](docs/Api/BrandingApi.md#apiorganizationsidlogodelete) | **DELETE** /organizations/{id}/logo | Unset your Organization Logo
 *BrandingApi* | [**apiOrganizationsIdlogoPost**](docs/Api/BrandingApi.md#apiorganizationsidlogopost) | **POST** /organizations/{id}/logo | Upload your Organization logo
-*MediaApi* | [**apiMediasIdGet**](docs/Api/MediaApi.md#apimediasidget) | **GET** /medias/{id} | Retrieves a Media resource.
 *NotificationApi* | [**apiPersonasIdnotificationsGetCollection**](docs/Api/NotificationApi.md#apipersonasidnotificationsgetcollection) | **GET** /personas/{id}/notifications | Retrieve pending notifications for Persona
 *NotificationApi* | [**apiPersonasPersonaIdnotificationsIdPatch**](docs/Api/NotificationApi.md#apipersonaspersonaidnotificationsidpatch) | **PATCH** /personas/{personaId}/notifications/{id} | Mark as read/unread a notification for Persona
 *NotificationApi* | [**apiUsersIdnotificationsGetCollection**](docs/Api/NotificationApi.md#apiusersidnotificationsgetcollection) | **GET** /users/{id}/notifications | Retrieves the collection of Notification resources.
@@ -112,27 +111,8 @@ Class | Method | HTTP request | Description
 *ResolutionCenterApi* | [**apiDisputesUlidparcelsGetCollection**](docs/Api/ResolutionCenterApi.md#apidisputesulidparcelsgetcollection) | **GET** /disputes/{ulid}/parcels | Retrieves the collection of Parcel resources.
 *ResolutionCenterApi* | [**apiDisputesUlidparcelsIdDelete**](docs/Api/ResolutionCenterApi.md#apidisputesulidparcelsiddelete) | **DELETE** /disputes/{ulid}/parcels/{id} | Removes the Parcel resource.
 *ResolutionCenterApi* | [**apiDisputesUlidparcelsPost**](docs/Api/ResolutionCenterApi.md#apidisputesulidparcelspost) | **POST** /disputes/{ulid}/parcels | Creates a Parcel resource.
+*ResolutionCenterApi* | [**apiOffersUlidmediasIdDelete**](docs/Api/ResolutionCenterApi.md#apioffersulidmediasiddelete) | **DELETE** /offers/{ulid}/medias/{id} | Removes the Media resource.
 *ResolutionCenterApi* | [**apiOffersUlidmediasPost**](docs/Api/ResolutionCenterApi.md#apioffersulidmediaspost) | **POST** /offers/{ulid}/medias | Upload a picture for a given Offer
-*SafeCheckoutApi* | [**apiOffersGetCollection**](docs/Api/SafeCheckoutApi.md#apioffersgetcollection) | **GET** /offers | Read issued Offers
-*SafeCheckoutApi* | [**apiOffersPost**](docs/Api/SafeCheckoutApi.md#apiofferspost) | **POST** /offers | Create an Offer and retrieve url
-*SafeCheckoutApi* | [**apiOffersUlidGet**](docs/Api/SafeCheckoutApi.md#apioffersulidget) | **GET** /offers/{ulid} | Read an Offer
-*SafeCheckoutApi* | [**apiOffersUlidmediasIdDelete**](docs/Api/SafeCheckoutApi.md#apioffersulidmediasiddelete) | **DELETE** /offers/{ulid}/medias/{id} | Removes the Media resource.
-*SafeCheckoutApi* | [**apiOffersUlidmediasPost**](docs/Api/SafeCheckoutApi.md#apioffersulidmediaspost) | **POST** /offers/{ulid}/medias | Upload a picture for a given Offer
-*SafeCheckoutApi* | [**apiOffersUlidtransactionsGetCollection**](docs/Api/SafeCheckoutApi.md#apioffersulidtransactionsgetcollection) | **GET** /offers/{ulid}/transactions | Retrieve Payment Intents for Offer
-*SafeCheckoutApi* | [**apiOffersUlidtransactionsIdevaluationsPost**](docs/Api/SafeCheckoutApi.md#apioffersulidtransactionsidevaluationspost) | **POST** /offers/{ulid}/transactions/{id}/evaluations | Submit an Evaluation for the Offer
-*SafeCheckoutApi* | [**apiOffersUlidtransactionsPost**](docs/Api/SafeCheckoutApi.md#apioffersulidtransactionspost) | **POST** /offers/{ulid}/transactions | Create a Payment Intent for Offer
-*SafeCheckoutApi* | [**apiPersonasIdoffersDelete**](docs/Api/SafeCheckoutApi.md#apipersonasidoffersdelete) | **DELETE** /personas/{id}/offers | Revoke an Offer for given Persona
-*SafeCheckoutApi* | [**apiPersonasIdoffersGetCollection**](docs/Api/SafeCheckoutApi.md#apipersonasidoffersgetcollection) | **GET** /personas/{id}/offers | List or Search Offers for given Persona
-*SafeCheckoutApi* | [**apiPersonasIdoffersPatch**](docs/Api/SafeCheckoutApi.md#apipersonasidofferspatch) | **PATCH** /personas/{id}/offers | Update an Offer for given Persona
-*SafeCheckoutApi* | [**apiPersonasIdoffersPost**](docs/Api/SafeCheckoutApi.md#apipersonasidofferspost) | **POST** /personas/{id}/offers | Create an Offer for given Persona
-*SafeCheckoutApi* | [**apiTransactionsGetCollection**](docs/Api/SafeCheckoutApi.md#apitransactionsgetcollection) | **GET** /transactions | Retrieves the collection of Transaction resources.
-*SafeCheckoutApi* | [**apiTransactionsUliddisputeDelete**](docs/Api/SafeCheckoutApi.md#apitransactionsuliddisputedelete) | **DELETE** /transactions/{ulid}/dispute | Abandon claims on Dispute
-*SafeCheckoutApi* | [**apiTransactionsUliddisputeGet**](docs/Api/SafeCheckoutApi.md#apitransactionsuliddisputeget) | **GET** /transactions/{ulid}/dispute | Read Dispute from existing Transaction
-*SafeCheckoutApi* | [**apiTransactionsUliddisputePatch**](docs/Api/SafeCheckoutApi.md#apitransactionsuliddisputepatch) | **PATCH** /transactions/{ulid}/dispute | Interact with a Dispute
-*SafeCheckoutApi* | [**apiTransactionsUliddisputePost**](docs/Api/SafeCheckoutApi.md#apitransactionsuliddisputepost) | **POST** /transactions/{ulid}/dispute | Open a Dispute related to existing Transaction
-*SafeCheckoutApi* | [**apiTransactionsUlidparcelsGetCollection**](docs/Api/SafeCheckoutApi.md#apitransactionsulidparcelsgetcollection) | **GET** /transactions/{ulid}/parcels | Read shipments from Transaction
-*SafeCheckoutApi* | [**apiTransactionsUlidparcelsIdDelete**](docs/Api/SafeCheckoutApi.md#apitransactionsulidparcelsiddelete) | **DELETE** /transactions/{ulid}/parcels/{id} | Withdraw shipment from Transaction
-*SafeCheckoutApi* | [**apiTransactionsUlidparcelsPost**](docs/Api/SafeCheckoutApi.md#apitransactionsulidparcelspost) | **POST** /transactions/{ulid}/parcels | Manually declare package shipped for Transaction
 *UserApi* | [**apiApiClientsGetCollection**](docs/Api/UserApi.md#apiapiclientsgetcollection) | **GET** /api-clients | Retrieves the collection of ApiClient resources.
 *UserApi* | [**apiApiClientsIdentifierDelete**](docs/Api/UserApi.md#apiapiclientsidentifierdelete) | **DELETE** /api-clients/{identifier} | Removes the ApiClient resource.
 *UserApi* | [**apiApiClientsIdentifierGet**](docs/Api/UserApi.md#apiapiclientsidentifierget) | **GET** /api-clients/{identifier} | Retrieves a ApiClient resource.
@@ -167,104 +147,100 @@ Class | Method | HTTP request | Description
 
 - [AccessError](docs/Model/AccessError.md)
 - [Address](docs/Model/Address.md)
-- [AddressIndependentWrite](docs/Model/AddressIndependentWrite.md)
-- [AddressUpdate](docs/Model/AddressUpdate.md)
-- [AddressWrite](docs/Model/AddressWrite.md)
 - [ApiClientPostCreationRead](docs/Model/ApiClientPostCreationRead.md)
 - [ApiClientRead](docs/Model/ApiClientRead.md)
 - [ApiClientWrite](docs/Model/ApiClientWrite.md)
 - [AuthError](docs/Model/AuthError.md)
+- [DisputeAddressIndependentWrite](docs/Model/DisputeAddressIndependentWrite.md)
 - [DisputeCollectionRead](docs/Model/DisputeCollectionRead.md)
 - [DisputeDisputeRead](docs/Model/DisputeDisputeRead.md)
 - [DisputeIndependentWrite](docs/Model/DisputeIndependentWrite.md)
+- [DisputeMediaRead](docs/Model/DisputeMediaRead.md)
+- [DisputeMetadataIndependentWrite](docs/Model/DisputeMetadataIndependentWrite.md)
+- [DisputeMetadataRead](docs/Model/DisputeMetadataRead.md)
+- [DisputeOfferCollectionRead](docs/Model/DisputeOfferCollectionRead.md)
+- [DisputeOfferIndependentWrite](docs/Model/DisputeOfferIndependentWrite.md)
+- [DisputeOfferRead](docs/Model/DisputeOfferRead.md)
+- [DisputeOrganizationRead](docs/Model/DisputeOrganizationRead.md)
+- [DisputeParcelIndependentWrite](docs/Model/DisputeParcelIndependentWrite.md)
+- [DisputeParcelRead](docs/Model/DisputeParcelRead.md)
+- [DisputePersonaCollectionRead](docs/Model/DisputePersonaCollectionRead.md)
+- [DisputePersonaIndependentWrite](docs/Model/DisputePersonaIndependentWrite.md)
+- [DisputePersonaRead](docs/Model/DisputePersonaRead.md)
 - [DisputePostCreationRead](docs/Model/DisputePostCreationRead.md)
 - [DisputeRead](docs/Model/DisputeRead.md)
+- [DisputeTransactionCollectionRead](docs/Model/DisputeTransactionCollectionRead.md)
+- [DisputeTransactionIndependentWrite](docs/Model/DisputeTransactionIndependentWrite.md)
+- [DisputeTransactionRead](docs/Model/DisputeTransactionRead.md)
 - [DisputeUpdate](docs/Model/DisputeUpdate.md)
-- [DisputeWrite](docs/Model/DisputeWrite.md)
+- [DisputeViewRead](docs/Model/DisputeViewRead.md)
+- [DisputeWorkflowEventRead](docs/Model/DisputeWorkflowEventRead.md)
 - [EvaluationRead](docs/Model/EvaluationRead.md)
 - [EvaluationWrite](docs/Model/EvaluationWrite.md)
 - [Evidence](docs/Model/Evidence.md)
+- [EvidenceMediaRead](docs/Model/EvidenceMediaRead.md)
 - [EvidenceRead](docs/Model/EvidenceRead.md)
-- [EvidenceReadMedia](docs/Model/EvidenceReadMedia.md)
 - [EvidenceWrite](docs/Model/EvidenceWrite.md)
 - [GenericError](docs/Model/GenericError.md)
 - [InvalidQueryError](docs/Model/InvalidQueryError.md)
 - [Media](docs/Model/Media.md)
-- [MediaAuthenticatedRead](docs/Model/MediaAuthenticatedRead.md)
-- [MediaCollectionRead](docs/Model/MediaCollectionRead.md)
 - [MediaDisputeRead](docs/Model/MediaDisputeRead.md)
 - [MediaRead](docs/Model/MediaRead.md)
 - [MediaUserRead](docs/Model/MediaUserRead.md)
 - [MessageError](docs/Model/MessageError.md)
 - [Metadata](docs/Model/Metadata.md)
 - [MetadataDisputeRead](docs/Model/MetadataDisputeRead.md)
-- [MetadataIndependentWrite](docs/Model/MetadataIndependentWrite.md)
-- [MetadataRead](docs/Model/MetadataRead.md)
-- [MetadataUpdate](docs/Model/MetadataUpdate.md)
-- [MetadataWrite](docs/Model/MetadataWrite.md)
 - [NotFoundError](docs/Model/NotFoundError.md)
 - [NotificationRead](docs/Model/NotificationRead.md)
 - [NotificationUpdate](docs/Model/NotificationUpdate.md)
-- [Offer](docs/Model/Offer.md)
-- [OfferCollectionRead](docs/Model/OfferCollectionRead.md)
 - [OfferDisputeRead](docs/Model/OfferDisputeRead.md)
-- [OfferDisputeReadOrganization](docs/Model/OfferDisputeReadOrganization.md)
-- [OfferIndependentWrite](docs/Model/OfferIndependentWrite.md)
-- [OfferPostCreationRead](docs/Model/OfferPostCreationRead.md)
-- [OfferRead](docs/Model/OfferRead.md)
-- [OfferReadOrganization](docs/Model/OfferReadOrganization.md)
-- [OfferUpdate](docs/Model/OfferUpdate.md)
-- [OfferWrite](docs/Model/OfferWrite.md)
-- [OrganizationAuthenticatedRead](docs/Model/OrganizationAuthenticatedRead.md)
-- [OrganizationAuthenticatedReadIcon](docs/Model/OrganizationAuthenticatedReadIcon.md)
+- [OrganizationAddressUpdate](docs/Model/OrganizationAddressUpdate.md)
 - [OrganizationCollectionRead](docs/Model/OrganizationCollectionRead.md)
-- [OrganizationCollectionReadIcon](docs/Model/OrganizationCollectionReadIcon.md)
 - [OrganizationDisputeRead](docs/Model/OrganizationDisputeRead.md)
-- [OrganizationDisputeReadIcon](docs/Model/OrganizationDisputeReadIcon.md)
+- [OrganizationMediaCollectionRead](docs/Model/OrganizationMediaCollectionRead.md)
+- [OrganizationMediaRead](docs/Model/OrganizationMediaRead.md)
 - [OrganizationRead](docs/Model/OrganizationRead.md)
 - [OrganizationUpdate](docs/Model/OrganizationUpdate.md)
-- [OrganizationUpdateBillingAddress](docs/Model/OrganizationUpdateBillingAddress.md)
 - [OrganizationUserRead](docs/Model/OrganizationUserRead.md)
-- [OrganizationUserReadIcon](docs/Model/OrganizationUserReadIcon.md)
-- [OrganizationWrite](docs/Model/OrganizationWrite.md)
-- [OrganizationWriteBillingAddress](docs/Model/OrganizationWriteBillingAddress.md)
 - [Parcel](docs/Model/Parcel.md)
 - [ParcelDisputeRead](docs/Model/ParcelDisputeRead.md)
-- [ParcelIndependentWrite](docs/Model/ParcelIndependentWrite.md)
-- [ParcelRead](docs/Model/ParcelRead.md)
 - [ParcelWrite](docs/Model/ParcelWrite.md)
 - [Persona](docs/Model/Persona.md)
-- [PersonaAddress](docs/Model/PersonaAddress.md)
+- [PersonaAddressRead](docs/Model/PersonaAddressRead.md)
+- [PersonaAddressUpdate](docs/Model/PersonaAddressUpdate.md)
+- [PersonaAddressWrite](docs/Model/PersonaAddressWrite.md)
 - [PersonaAuthReturn](docs/Model/PersonaAuthReturn.md)
 - [PersonaCollectionRead](docs/Model/PersonaCollectionRead.md)
 - [PersonaDisputeRead](docs/Model/PersonaDisputeRead.md)
 - [PersonaExternalAuth](docs/Model/PersonaExternalAuth.md)
-- [PersonaIndependentWrite](docs/Model/PersonaIndependentWrite.md)
-- [PersonaIndependentWriteAddress](docs/Model/PersonaIndependentWriteAddress.md)
+- [PersonaMetadataRead](docs/Model/PersonaMetadataRead.md)
+- [PersonaMetadataUpdate](docs/Model/PersonaMetadataUpdate.md)
+- [PersonaMetadataWrite](docs/Model/PersonaMetadataWrite.md)
 - [PersonaPostAuthRead](docs/Model/PersonaPostAuthRead.md)
 - [PersonaRead](docs/Model/PersonaRead.md)
 - [PersonaRegister](docs/Model/PersonaRegister.md)
 - [PersonaTokenWrite](docs/Model/PersonaTokenWrite.md)
 - [PersonaUpdate](docs/Model/PersonaUpdate.md)
-- [PersonaUpdateAddress](docs/Model/PersonaUpdateAddress.md)
 - [PersonaWrite](docs/Model/PersonaWrite.md)
-- [PersonaWriteAddress](docs/Model/PersonaWriteAddress.md)
 - [RateLimitError](docs/Model/RateLimitError.md)
-- [TransactionCollectionRead](docs/Model/TransactionCollectionRead.md)
 - [TransactionDisputeRead](docs/Model/TransactionDisputeRead.md)
-- [TransactionIndependentWrite](docs/Model/TransactionIndependentWrite.md)
-- [TransactionRead](docs/Model/TransactionRead.md)
 - [UnprocessableEntity](docs/Model/UnprocessableEntity.md)
 - [UnprocessableEntityViolationsInner](docs/Model/UnprocessableEntityViolationsInner.md)
 - [User](docs/Model/User.md)
+- [UserAddressWrite](docs/Model/UserAddressWrite.md)
 - [UserAuthenticatedRead](docs/Model/UserAuthenticatedRead.md)
-- [UserAuthenticatedReadOrganization](docs/Model/UserAuthenticatedReadOrganization.md)
 - [UserCollectionRead](docs/Model/UserCollectionRead.md)
-- [UserCollectionReadOrganization](docs/Model/UserCollectionReadOrganization.md)
 - [UserEmailValidationWrite](docs/Model/UserEmailValidationWrite.md)
 - [UserInvite](docs/Model/UserInvite.md)
 - [UserJwtCreated](docs/Model/UserJwtCreated.md)
 - [UserJwtWrite](docs/Model/UserJwtWrite.md)
+- [UserMediaAuthenticatedRead](docs/Model/UserMediaAuthenticatedRead.md)
+- [UserMediaCollectionRead](docs/Model/UserMediaCollectionRead.md)
+- [UserMediaRead](docs/Model/UserMediaRead.md)
+- [UserOrganizationAuthenticatedRead](docs/Model/UserOrganizationAuthenticatedRead.md)
+- [UserOrganizationCollectionRead](docs/Model/UserOrganizationCollectionRead.md)
+- [UserOrganizationRead](docs/Model/UserOrganizationRead.md)
+- [UserOrganizationWrite](docs/Model/UserOrganizationWrite.md)
 - [UserPostRegisterRead](docs/Model/UserPostRegisterRead.md)
 - [UserTotpSetupRead](docs/Model/UserTotpSetupRead.md)
 - [UserTotpToggleWrite](docs/Model/UserTotpToggleWrite.md)
@@ -272,13 +248,10 @@ Class | Method | HTTP request | Description
 - [UserUserEmailUpdate](docs/Model/UserUserEmailUpdate.md)
 - [UserUserPasswordUpdate](docs/Model/UserUserPasswordUpdate.md)
 - [UserUserRead](docs/Model/UserUserRead.md)
-- [UserUserReadOrganization](docs/Model/UserUserReadOrganization.md)
 - [UserUserSubscribed](docs/Model/UserUserSubscribed.md)
 - [UserWrite](docs/Model/UserWrite.md)
-- [UserWriteOrganization](docs/Model/UserWriteOrganization.md)
 - [View](docs/Model/View.md)
 - [ViewDisputeRead](docs/Model/ViewDisputeRead.md)
-- [ViewRead](docs/Model/ViewRead.md)
 - [Webhook](docs/Model/Webhook.md)
 - [WebhookHistoryCollectionRead](docs/Model/WebhookHistoryCollectionRead.md)
 - [WebhookHistoryRead](docs/Model/WebhookHistoryRead.md)
@@ -286,7 +259,6 @@ Class | Method | HTTP request | Description
 - [WebhookSubscriptionRead](docs/Model/WebhookSubscriptionRead.md)
 - [WebhookSubscriptionWrite](docs/Model/WebhookSubscriptionWrite.md)
 - [WorkflowEventDisputeRead](docs/Model/WorkflowEventDisputeRead.md)
-- [WorkflowEventRead](docs/Model/WorkflowEventRead.md)
 
 ## Authorization
 
@@ -341,5 +313,6 @@ noc@tripartie.com
 
 This PHP package is automatically generated by the [OpenAPI Generator](https://openapi-generator.tech) project:
 
-- API version: `2.0.178`
+- API version: `2.0.204`
+    - Generator version: `7.6.0`
 - Build package: `org.openapitools.codegen.languages.PhpClientCodegen`

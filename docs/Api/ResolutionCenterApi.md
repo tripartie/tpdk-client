@@ -17,6 +17,7 @@ All URIs are relative to https://staging-api.tripartie.com, except if the operat
 | [**apiDisputesUlidparcelsGetCollection()**](ResolutionCenterApi.md#apiDisputesUlidparcelsGetCollection) | **GET** /disputes/{ulid}/parcels | Retrieves the collection of Parcel resources. |
 | [**apiDisputesUlidparcelsIdDelete()**](ResolutionCenterApi.md#apiDisputesUlidparcelsIdDelete) | **DELETE** /disputes/{ulid}/parcels/{id} | Removes the Parcel resource. |
 | [**apiDisputesUlidparcelsPost()**](ResolutionCenterApi.md#apiDisputesUlidparcelsPost) | **POST** /disputes/{ulid}/parcels | Creates a Parcel resource. |
+| [**apiOffersUlidmediasIdDelete()**](ResolutionCenterApi.md#apiOffersUlidmediasIdDelete) | **DELETE** /offers/{ulid}/medias/{id} | Removes the Media resource. |
 | [**apiOffersUlidmediasPost()**](ResolutionCenterApi.md#apiOffersUlidmediasPost) | **POST** /offers/{ulid}/medias | Upload a picture for a given Offer |
 
 
@@ -435,7 +436,7 @@ $apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
     new GuzzleHttp\Client(),
     $config
 );
-$ulid = 'ulid_example'; // string | Dispute identifier
+$ulid = 'ulid_example'; // string | Evaluation identifier
 $evaluationWrite = new \Tripartie\Tpdk\Model\EvaluationWrite(); // \Tripartie\Tpdk\Model\EvaluationWrite | The new Evaluation resource
 
 try {
@@ -450,7 +451,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **ulid** | **string**| Dispute identifier | |
+| **ulid** | **string**| Evaluation identifier | |
 | **evaluationWrite** | [**\Tripartie\Tpdk\Model\EvaluationWrite**](../Model/EvaluationWrite.md)| The new Evaluation resource | |
 
 ### Return type
@@ -873,7 +874,7 @@ void (empty response body)
 ## `apiDisputesUlidparcelsPost()`
 
 ```php
-apiDisputesUlidparcelsPost($ulid, $parcelWrite): \Tripartie\Tpdk\Model\ParcelRead
+apiDisputesUlidparcelsPost($ulid, $parcelWrite): object
 ```
 
 Creates a Parcel resource.
@@ -927,7 +928,7 @@ try {
 
 ### Return type
 
-[**\Tripartie\Tpdk\Model\ParcelRead**](../Model/ParcelRead.md)
+**object**
 
 ### Authorization
 
@@ -936,6 +937,77 @@ try {
 ### HTTP request headers
 
 - **Content-Type**: `application/json`
+- **Accept**: `application/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `apiOffersUlidmediasIdDelete()`
+
+```php
+apiOffersUlidmediasIdDelete($ulid, $id)
+```
+
+Removes the Media resource.
+
+Removes the Media resource.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+// Configure API key authorization: jwtPersonalKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+
+// Configure API key authorization: personaAuthKey
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKey('X-Persona-Authorization', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setApiKeyPrefix('X-Persona-Authorization', 'Bearer');
+
+// Configure OAuth2 access token for authorization: oauth
+$config = Tripartie\Tpdk\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+
+$apiInstance = new Tripartie\Tpdk\Api\ResolutionCenterApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$ulid = 'ulid_example'; // string | 
+$id = 56; // int | 
+
+try {
+    $apiInstance->apiOffersUlidmediasIdDelete($ulid, $id);
+} catch (Exception $e) {
+    echo 'Exception when calling ResolutionCenterApi->apiOffersUlidmediasIdDelete: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **ulid** | **string**|  | |
+| **id** | **int**|  | |
+
+### Return type
+
+void (empty response body)
+
+### Authorization
+
+[jwtPersonalKey](../../README.md#jwtPersonalKey), [personaAuthKey](../../README.md#personaAuthKey), [oauth](../../README.md#oauth)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
 - **Accept**: `application/json`
 
 [[Back to top]](#) [[Back to API list]](../../README.md#endpoints)

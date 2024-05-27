@@ -46,6 +46,6 @@ Name | Type | Description | Notes
 **salt** | **string** |  | [optional] [readonly]
 **userIdentifier** | **string** |  | [optional] [readonly]
 **impersonatingOrganization** | **bool** |  | [optional] [readonly]
-**_2fa** | **bool** |  | [optional] [readonly]
+**secondAuthFactor** | **bool** |  | [optional] [readonly]
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

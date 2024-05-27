@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ulid** | **string** |  |
-**transaction** | [**\Tripartie\Tpdk\Model\TransactionRead**](TransactionRead.md) |  | [optional]
+**transaction** | [**\Tripartie\Tpdk\Model\DisputeTransactionRead**](DisputeTransactionRead.md) |  | [optional]
 **status** | **string** |  | [default to 'CREATED']
 **redirectUrl** | **string** | Fill-in that field IF you intend to redirect your customer instead of using a WebView. | [optional]
 **itemCount** | **int** | The dispute may concern only PART of the package. Specify it there. | [optional]
@@ -33,10 +33,10 @@ Name | Type | Description | Notes
 **platformActorType** | **string** |  | [optional]
 **platformReasoning** | **string** | Explicit additional information about the platform decision. Could be written by AI, Ruling or Customer Care. | [optional]
 **arbitrationBy** | **string** |  | [optional]
-**parcels** | [**\Tripartie\Tpdk\Model\ParcelRead[]**](ParcelRead.md) |  |
-**views** | [**\Tripartie\Tpdk\Model\ViewRead[]**](ViewRead.md) |  |
-**metadata** | [**\Tripartie\Tpdk\Model\MetadataRead[]**](MetadataRead.md) |  |
-**events** | [**\Tripartie\Tpdk\Model\WorkflowEventRead[]**](WorkflowEventRead.md) |  | [optional]
+**parcels** | [**\Tripartie\Tpdk\Model\DisputeParcelRead[]**](DisputeParcelRead.md) |  |
+**views** | [**\Tripartie\Tpdk\Model\DisputeViewRead[]**](DisputeViewRead.md) |  |
+**metadata** | [**\Tripartie\Tpdk\Model\DisputeMetadataRead[]**](DisputeMetadataRead.md) |  |
+**events** | [**\Tripartie\Tpdk\Model\DisputeWorkflowEventRead[]**](DisputeWorkflowEventRead.md) |  | [optional]
 **createdAt** | **\DateTime** |  | [optional] [readonly]
 **updatedAt** | **\DateTime** |  | [optional] [readonly]
 **viewCount** | **int** |  | [optional] [readonly]
